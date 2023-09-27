@@ -11,15 +11,18 @@ public class Main_menu : MonoBehaviour
     {
         SceneManager.LoadScene("Main_menu");
     }
-    // Start is called before the first frame update
-    void Start()
+    public void ClickOperationButton()
     {
-
+        SceneManager.LoadScene("Operation");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ClickOptionButton()
     {
+        SceneManager.LoadScene("Option");
+    }
 
+    public void ClickCreditButton()
+    {
+        SceneManager.LoadScene("Credit");
     }
 }
