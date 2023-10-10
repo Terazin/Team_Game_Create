@@ -25,4 +25,19 @@ public class Main_menu : MonoBehaviour
     {
         SceneManager.LoadScene("Credit");
     }
+
+    public void ClickStage_SelectButton()
+    {
+        SceneManager.LoadScene("Stege_Select");
+    }
+
+    public void ClickStage_sub1Button()
+    {
+        SceneManager.LoadScene("Stage_sub1");
+    }
+    public void ClickStage_sub2Button()
+    {
+        SceneManager.LoadScene("Stage_sub2");
+    }
+
 }
