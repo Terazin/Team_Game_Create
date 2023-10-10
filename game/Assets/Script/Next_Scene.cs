@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Main_menu : MonoBehaviour
+public class Next_Scene : MonoBehaviour
 {
 
     public void ClickStartButton()
@@ -31,13 +31,13 @@ public class Main_menu : MonoBehaviour
         SceneManager.LoadScene("Stege_Select");
     }
 
-    public void ClickStage_sub1Button()
+    public void ClickFirstStageButton()
     {
-        SceneManager.LoadScene("Stage_sub1");
+        SceneManager.LoadScene("FirstStage");
     }
-    public void ClickStage_sub2Button()
+    public void ClickSecondStageButton()
     {
-        SceneManager.LoadScene("Stage_sub2");
+        SceneManager.LoadScene("SecondStage");
     }
 
 }
