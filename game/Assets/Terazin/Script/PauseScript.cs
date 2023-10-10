@@ -32,4 +32,5 @@ public class PauseScript : MonoBehaviour
         Time.timeScale = 1;
         pausePanel.SetActive(false);
     }
+
 }
