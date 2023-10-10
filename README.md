@@ -1,2 +1,2 @@
 # Team_Game_Create
-aa
+チーム制作
