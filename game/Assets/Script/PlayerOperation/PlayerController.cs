@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float walkSpeed;
-    private float speed;
+    private float sspeed;
     private Vector3 movement;
     private CharacterController controller;
-   
+
+    
 
     // ★追加（方向転換）
     private Vector3 moveDir = Vector3.zero;
@@ -18,7 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
 
-        speed = walkSpeed;
+        sspeed = walkSpeed;
     }
 
     void Update()
@@ -39,8 +40,8 @@ public class PlayerController : MonoBehaviour
         moveDir.y -= gravity * Time.deltaTime; // 疑似重力の実装
 
         // ★改良（方向転換）
-        controller.Move(moveDir * Time.deltaTime * speed);       
-    }
+        controller.Move(moveDir * Time.deltaTime * sspeed);
 
-    
+
+    }
 }
