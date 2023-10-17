@@ -5,27 +5,33 @@ using UnityEngine.UI;
 
 public class PauseScript : MonoBehaviour
 {
-    [SerializeField] private Button pauseButton;
+    //[SerializeField] private Button pauseButton;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private Button resumeButton;
+
+
     // Start is called before the first frame update
     void Start()
     {
         pausePanel.SetActive(false);
-        pauseButton.onClick.AddListener(Pause);
+        //pauseButton.onClick.AddListener(Pause);
         resumeButton.onClick.AddListener(Resume);
     }
 
-    // Update is called once per frame
-    void Update()
+// Update is called once per frame
+void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = 0;
+            pausePanel.SetActive(true);
+        }
     }
-    public void Pause()
+    /*public void Pause()
     {
         Time.timeScale = 0;
         pausePanel.SetActive(true);
-    }
+    }*/
 
     public void Resume()
     {
