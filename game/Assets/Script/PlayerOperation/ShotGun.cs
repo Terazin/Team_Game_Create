@@ -8,12 +8,12 @@ public class ShotGun : MonoBehaviour
     public GameObject bulletPrefab;
     //public AudioClip shotSound;
     public float shotSpeed;
-    //private bool shotBullet = false;
+    private bool shotBullet = false;
 
     void Update()
     {
-        //if (!shotBullet)  //弾を一発撃つと、shotBulletがtrueになって撃てなくなる。
-        //{
+        if (!shotBullet)  //弾を一発撃つと、shotBulletがtrueになって撃てなくなる。
+        {
             // マウス左クリックで発射
             if (Input.GetMouseButtonDown(0))
             {
@@ -23,8 +23,8 @@ public class ShotGun : MonoBehaviour
 
                 //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
 
-                //shotBullet = true;
+                shotBullet = true;
             }
-       // }      
+        }
     }
 }
