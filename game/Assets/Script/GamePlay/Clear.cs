@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GamePause : MonoBehaviour
+public class Clear : MonoBehaviour
 {
+    public int enemyNum; //敵の数（Componentから設定可能）
+    public int destroyCount;
+    public string NextStage; //ここに次のステージのScene名を入れる。
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +18,11 @@ public class GamePause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (destroyCount == enemyNum)
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene(NextStage);
         }
     }
+
+
 }

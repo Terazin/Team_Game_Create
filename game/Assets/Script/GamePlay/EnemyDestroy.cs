@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyDestroy : MonoBehaviour
 {
+    [SerializeField] Clear clear;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +17,12 @@ public class EnemyDestroy : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.tag == "Bullet")
         {
             Destroy(gameObject);
+            clear.destroyCount++;
         }
     }
 }
