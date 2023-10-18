@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] Transform camTransform;
     public float walkSpeed;
     private float speed;
     private Vector3 movement;
@@ -15,10 +13,12 @@ public class PlayerController : MonoBehaviour
 
     // カメラの回転用
     public float turnSpeed = 150f; // 追加: この数値を変更して、カメラの回転速度を調整できます。
+    private Transform camTransform;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        camTransform = Camera.main.transform; // カメラのTransformを取得
         speed = walkSpeed;
     }
 
@@ -48,7 +48,6 @@ public class PlayerController : MonoBehaviour
         float turnH = Input.GetAxis("RightStick Horizontal");
         float turnV = Input.GetAxis("RightStick Vertical");
 
-        Debug.Log(turnH);
 
 
         camTransform.Rotate(Vector3.up * turnH * turnSpeed * Time.deltaTime); // 水平方向の回転
