@@ -6,6 +6,7 @@ public class GunController : MonoBehaviour
 {
     void Update()
     {
-        transform.rotation = Quaternion.Euler(Camera.main.transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, 0);
+        transform.rotation = Quaternion.Euler(Camera.main.transform.eulerAngles.x, 0, 0);
     }
+
 }
