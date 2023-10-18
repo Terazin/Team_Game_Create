@@ -40,4 +40,8 @@ public class Next_Scene : MonoBehaviour
         SceneManager.LoadScene("SecondStage");
     }
 
+    public void ClickThirdStageButton()
+    {
+        SceneManager.LoadScene("ThirdStage");
+    }
 }
