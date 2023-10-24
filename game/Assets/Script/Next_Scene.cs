@@ -7,6 +7,23 @@ using UnityEngine.SceneManagement;
 public class Next_Scene : MonoBehaviour
 {
 
+    GameObject loadPanel;
+    Slider loadSlider;
+    Text loadProgressText;
+
+    AsyncOperation async;
+
+    void Start()
+    {
+        loadPanel = GameObject.Find("Canvas").transform.Find
+               ("LoadPanel").gameObject;
+
+        loadSlider = loadPanel.transform.Find
+               ("Slider").GetComponent<Slider>();
+
+        loadProgressText = loadSlider.transform.Find
+               ("LoadText").GetComponent<Text>();
+    }
     public void ClickStartButton()
     {
         SceneManager.LoadScene("Main_menu");
@@ -33,7 +50,7 @@ public class Next_Scene : MonoBehaviour
 
     public void ClickFirstStageButton()
     {
-        SceneManager.LoadScene("FirstStage");
+        StartCoroutine(LoadScene("FirstStage"));
     }
     public void ClickSecondStageButton()
     {
@@ -42,6 +59,29 @@ public class Next_Scene : MonoBehaviour
 
     public void ClickThirdStageButton()
     {
-        SceneManager.LoadScene("ThirdStage");
+        StartCoroutine(LoadScene("ThirdStage"));
     }
+    public IEnumerator LoadScene(string sceneName)
+    {
+        async = SceneManager.LoadSceneAsync(sceneName);
+        loadPanel.SetActive(true);
+
+        while (!async.isDone)
+        {
+            loadProgressText.text = "êiçsíÜ..." + (async.progress * 100) + "%";
+
+            float progressValue = async.progress;
+            loadSlider.value = progressValue;
+
+            yield return null;
+
+        }
+        if (async.isDone) 
+        {
+        loadPanel.SetActive(false);
+        }
+
+    }
+
+
 }
