@@ -12,9 +12,9 @@ public class ShotGun : MonoBehaviour
 
     void Update()
     {
-        //if (!shotBullet)  //’e‚ğˆê”­Œ‚‚Â‚ÆAshotBullet‚ªtrue‚É‚È‚Á‚ÄŒ‚‚Ä‚È‚­‚È‚éB
+        //if (!shotBullet)  //å¼¾ã‚’ä¸€ç™ºæ’ƒã¤ã¨ã€shotBulletãŒtrueã«ãªã£ã¦æ’ƒã¦ãªããªã‚‹ã€‚
         //{
-            // ƒ}ƒEƒX¶ƒNƒŠƒbƒN‚Å”­Ë
+            // ãƒã‚¦ã‚¹å·¦ã‚¯ãƒªãƒƒã‚¯ã§ç™ºå°„
             if (Input.GetMouseButtonDown(0))
             {
                 GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
