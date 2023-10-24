@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 795b8fa9e94af6d46aefe107786e3f60
+guid: 2e11327e88595ce42845cb9d46795abc
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -18,12 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: kabe1
-    second: {fileID: 2100000, guid: 3251ae78420751c4a9dc4d186893e1e1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: 6c9b38851b121474eb53652d91649dbc, type: 2}
+    second: {fileID: 2100000, guid: 1457e72828ff6324ba7096c205717714, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -32,7 +27,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert7
+      name: nazo1
     second: {fileID: 2100000, guid: 6c9b38851b121474eb53652d91649dbc, type: 2}
   - first:
       type: UnityEngine:Material
@@ -44,6 +39,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: souti
     second: {fileID: 2100000, guid: 5dd0c3f16144b2f48b31b89a237d4368, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yuka
+    second: {fileID: 2100000, guid: af78b4c39a9c24244867239ed7757005, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
