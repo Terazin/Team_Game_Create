@@ -8,6 +8,7 @@ public class Clear : MonoBehaviour
     public int enemyNum; //敵の数（Componentから設定可能）
     public int destroyCount;
     public string NextStage; //ここに次のステージのScene名を入れる。
+    public CanvasGroup successShow;
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +21,19 @@ public class Clear : MonoBehaviour
     {
         if (destroyCount == enemyNum)
         {
-            SceneManager.LoadScene(NextStage);
+            successShow.alpha = 0.8f;
         }
     }
 
+    public void ToNextStage()
+    {
+        successShow.alpha = 0;
+        SceneManager.LoadScene(NextStage);
+    }
 
+    public void BackMainMenu()
+    {
+        successShow.alpha = 0;
+        SceneManager.LoadScene("Main_menu");
+    }
 }

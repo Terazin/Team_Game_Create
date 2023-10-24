@@ -12,10 +12,10 @@ public class ShotGun : MonoBehaviour
 
     void Update()
     {
-        if (!shotBullet)
-        {
-            // ƒRƒ“ƒgƒ[ƒ‰[‚ÌRTƒ{ƒ^ƒ“‚Å”­Ë
-            if (Input.GetAxis("TriggerRight") > 0.1f)
+        //if (!shotBullet)  //å¼¾ã‚’ä¸€ç™ºæ’ƒã¤ã¨ã€shotBulletãŒtrueã«ãªã£ã¦æ’ƒã¦ãªããªã‚‹ã€‚
+        //{
+            // ãƒã‚¦ã‚¹å·¦ã‚¯ãƒªãƒƒã‚¯ã§ç™ºå°„
+            if (Input.GetMouseButtonDown(0))
             {
                 GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
                 Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
@@ -25,6 +25,6 @@ public class ShotGun : MonoBehaviour
 
                 shotBullet = true;
             }
-        }
+        //}
     }
 }
