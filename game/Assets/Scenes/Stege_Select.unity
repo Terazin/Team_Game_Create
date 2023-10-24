@@ -2095,7 +2095,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 450395204}
-        m_TargetAssemblyTypeName: Next_Scene, Assembly-CSharp
+        m_TargetAssemblyTypeName: LoadScript, Assembly-CSharp
         m_MethodName: ClickFirstStageButton
         m_Mode: 1
         m_Arguments:
@@ -2153,7 +2153,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 450395199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ebac4b2f8158844ea4ef586e361433f, type: 3}
+  m_Script: {fileID: 11500000, guid: cd0cf8eb271844b4c808bdef1907c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &543180687 stripped
@@ -3538,7 +3538,7 @@ GameObject:
   - component: {fileID: 1020081869}
   - component: {fileID: 1020081868}
   - component: {fileID: 1020081867}
-  - component: {fileID: 1020081866}
+  - component: {fileID: 1020081870}
   m_Layer: 5
   m_Name: OK
   m_TagString: Untagged
@@ -3567,18 +3567,6 @@ RectTransform:
   m_AnchoredPosition: {x: 107, y: -230}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1020081866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020081864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ebac4b2f8158844ea4ef586e361433f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1020081867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3623,8 +3611,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1020081866}
-        m_TargetAssemblyTypeName: Next_Scene, Assembly-CSharp
+      - m_Target: {fileID: 1020081870}
+        m_TargetAssemblyTypeName: LoadScript, Assembly-CSharp
         m_MethodName: ClickThirdStageButton
         m_Mode: 1
         m_Arguments:
@@ -3673,6 +3661,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020081864}
   m_CullTransparentMesh: 1
+--- !u!114 &1020081870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020081864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0cf8eb271844b4c808bdef1907c243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1066737390
 GameObject:
   m_ObjectHideFlags: 0
@@ -7460,7 +7460,7 @@ GameObject:
   - component: {fileID: 2082834077}
   - component: {fileID: 2082834076}
   - component: {fileID: 2082834075}
-  - component: {fileID: 2082834074}
+  - component: {fileID: 2082834078}
   m_Layer: 5
   m_Name: OK
   m_TagString: Untagged
@@ -7489,18 +7489,6 @@ RectTransform:
   m_AnchoredPosition: {x: 107, y: -230}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2082834074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082834072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ebac4b2f8158844ea4ef586e361433f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2082834075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7545,8 +7533,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2082834074}
-        m_TargetAssemblyTypeName: Next_Scene, Assembly-CSharp
+      - m_Target: {fileID: 2082834078}
+        m_TargetAssemblyTypeName: LoadScript, Assembly-CSharp
         m_MethodName: ClickSecondStageButton
         m_Mode: 1
         m_Arguments:
@@ -7595,6 +7583,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082834072}
   m_CullTransparentMesh: 1
+--- !u!114 &2082834078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082834072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0cf8eb271844b4c808bdef1907c243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2104225534
 GameObject:
   m_ObjectHideFlags: 0
@@ -7953,6 +7953,10 @@ PrefabInstance:
     - target: {fileID: 1648489889031818135, guid: 8904f1951a2931042ba40dfa6d915582, type: 3}
       propertyPath: m_Name
       value: Stage3_t
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648489889031818135, guid: 8904f1951a2931042ba40dfa6d915582, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8904f1951a2931042ba40dfa6d915582, type: 3}
