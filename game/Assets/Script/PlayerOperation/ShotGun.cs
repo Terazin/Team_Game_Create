@@ -12,8 +12,8 @@ public class ShotGun : MonoBehaviour
 
     void Update()
     {
-        if (!shotBullet)  //弾を一発撃つと、shotBulletがtrueになって撃てなくなる。
-        {
+        //if (!shotBullet)  //弾を一発撃つと、shotBulletがtrueになって撃てなくなる。
+        //{
             // マウス左クリックで発射
             if (Input.GetMouseButtonDown(0))
             {
@@ -25,6 +25,6 @@ public class ShotGun : MonoBehaviour
 
                 shotBullet = true;
             }
-        }
+        //}
     }
 }
