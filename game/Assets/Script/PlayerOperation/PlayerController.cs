@@ -46,11 +46,10 @@ public class PlayerController : MonoBehaviour
     void CameraTurn()
     {
         float turnH = Input.GetAxis("RightStick Horizontal");
-        float turnV = Input.GetAxis("RightStick Vertical");
-
-
 
         camTransform.Rotate(Vector3.up * turnH * turnSpeed * Time.deltaTime); // 水平方向の回転
-        camTransform.Rotate(Vector3.right * -turnV * turnSpeed * Time.deltaTime); // 垂直方向の回転（マイナスを使って上下の動きを反転）
     }
+
+
+
 }
