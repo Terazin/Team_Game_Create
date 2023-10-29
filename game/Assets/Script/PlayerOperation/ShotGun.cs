@@ -8,7 +8,7 @@ public class ShotGun : MonoBehaviour
     public GameObject bulletPrefab;
     //public AudioClip shotSound;
     public float shotSpeed;
-    private bool shotBullet = false;
+    //private bool shotBullet = false;
 
     void Update()
     {
@@ -23,7 +23,7 @@ public class ShotGun : MonoBehaviour
 
                 //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
 
-                shotBullet = true;
+                //shotBullet = true;
             }
         //}
     }
