@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    //public int bulletRefCount = 0;
-    //public int bulletRefLimit;
-    
+    public int bulletRefCount = 0;
+    public int bulletRefLimit;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,15 +18,14 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (bulletRefLimit == bulletRefCount)
-        //{
-        //    PhysicMaterial bulletRef = GetComponent<PhysicMaterial>();
-        //    bulletRef.bounciness = 0f;
-        //}
+        if (bulletRefLimit == bulletRefCount)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void OnCollisionEnter(Collision collision)
     {
-        //bulletRefCount++;        
+        bulletRefCount++;
     }
 }
