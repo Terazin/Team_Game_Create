@@ -8,23 +8,30 @@ public class ShotGun : MonoBehaviour
     public GameObject bulletPrefab;
     //public AudioClip shotSound;
     public float shotSpeed;
-    //private bool shotBullet = false;
+
+    private bool wasTriggerPressed = false; // 前回のフレームでRTボタンが押されていたかのフラグ
 
     void Update()
     {
-        //if (!shotBullet)  //弾を一発撃つと、shotBulletがtrueになって撃てなくなる。
-        //{
-            // マウス左クリックで発射
-            if (Input.GetMouseButtonDown(0))
-            {
-                GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
-                Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
-                bulletRb.AddForce(transform.forward * shotSpeed);
+        // コントローラーのRTボタンでの入力を取得
+        bool isTriggerPressed = Input.GetAxis("TriggerRight") > 0.1f;
 
-                //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
+        // 前回のフレームでは押されておらず、現在のフレームで押されている場合に弾を発射
+        if (!wasTriggerPressed && isTriggerPressed)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
+            Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+            bulletRb.AddForce(transform.forward * shotSpeed);
 
-                //shotBullet = true;
-            }
-        //}
+            //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
+        }
+
+        // フラグの更新
+        wasTriggerPressed = isTriggerPressed;
+
+        // キャラクターのy軸の回転をカメラのy軸の回転に一致させる
+        Vector3 newRotation = new Vector3(transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, transform.eulerAngles.z);
+        transform.eulerAngles = newRotation;
+
     }
 }
