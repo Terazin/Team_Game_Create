@@ -7,7 +7,7 @@ public class GunWarp : MonoBehaviour
     private float speed = 3.0f;
 
     [SerializeField]
-    private Transform warpTarget; // ƒ[ƒvæ‚ÌˆÊ’u‚ğw’è‚·‚é‚½‚ß‚ÌƒIƒuƒWƒFƒNƒg
+    private Transform warpTarget; // ãƒ¯ãƒ¼ãƒ—å…ˆã®ä½ç½®ã‚’æŒ‡å®šã™ã‚‹ãŸã‚ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 
     void Update()
     {
@@ -22,7 +22,7 @@ public class GunWarp : MonoBehaviour
     {
         if (other.gameObject.name == "WarpPoint" && warpTarget != null)
         {
-            // ƒ[ƒvæ‚ÌˆÊ’u‚Éƒ[ƒv
+            // ãƒ¯ãƒ¼ãƒ—å…ˆã®ä½ç½®ã«ãƒ¯ãƒ¼ãƒ—
             this.transform.position = warpTarget.position;
         }
     }
