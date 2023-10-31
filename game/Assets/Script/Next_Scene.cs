@@ -31,17 +31,5 @@ public class Next_Scene : MonoBehaviour
         SceneManager.LoadScene("Stege_Select");
     }
 
-    public void ClickFirstStageButton()
-    {
-        SceneManager.LoadScene("FirstStage");
-    }
-    public void ClickSecondStageButton()
-    {
-        SceneManager.LoadScene("SecondStage");
-    }
 
-    public void ClickThirdStageButton()
-    {
-        SceneManager.LoadScene("ThirdStage");
-    }
 }

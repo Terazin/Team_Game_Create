@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class StageSelector : MonoBehaviour
 {
-   
-
-
     public GameObject two;
     public GameObject therr;
     public GameObject four;
