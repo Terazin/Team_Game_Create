@@ -12,10 +12,10 @@ public class ShotGun : MonoBehaviour
 
     void Update()
     {
-        if (!shotBullet)  //弾を一発撃つと、shotBulletがtrueになって撃てなくなる。
+        if (!shotBullet)
         {
-            // マウス左クリックで発射
-            if (Input.GetMouseButtonDown(0))
+            // コントローラーのRTボタンで発射
+            if (Input.GetAxis("TriggerRight") > 0.1f)
             {
                 GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
                 Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
