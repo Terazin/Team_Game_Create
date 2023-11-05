@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneReserch : MonoBehaviour
 {
-    public string sceneName;
-    public int bulletCount;
+    string sceneName;
+    int bulletCount;
     int bulletRefLimit;
 
     void Setting(string name)
@@ -43,5 +43,10 @@ public class SceneReserch : MonoBehaviour
 
     }
 
-    
+    public void OnCollisionStay(Collision collision)
+    {
+        bulletCount++;
+    }
+
+
 }
