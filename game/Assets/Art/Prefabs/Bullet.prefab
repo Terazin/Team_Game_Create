@@ -122,10 +122,10 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9173182356069293548}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f25668e951f43c4a9e6d9cc50089ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletRefCount: 0
-  bulletRefLimit: 2
+  sceneReserch: {fileID: 484709227043241134, guid: 6ccda1d3d2a663e4d9eee9b523411210, type: 3}
