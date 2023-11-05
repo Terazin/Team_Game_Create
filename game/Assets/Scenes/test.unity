@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 1240252180}
   - component: {fileID: 1240252179}
   m_Layer: 0
-  m_Name: WarpWall
+  m_Name: WarpPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
