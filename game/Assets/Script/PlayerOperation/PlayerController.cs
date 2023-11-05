@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMove();
         CameraTurn(); // ’Ç‰Á: ƒJƒƒ‰‚Ì‰ñ“]ˆ—‚ğŒÄ‚Ño‚µ
+
     }
 
     void PlayerMove()

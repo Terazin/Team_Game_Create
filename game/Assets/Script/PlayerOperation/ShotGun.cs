@@ -9,29 +9,7 @@ public class ShotGun : MonoBehaviour
     public GameObject bulletPrefab;
     //public AudioClip shotSound;
     public float shotSpeed;
-    //private bool shotBullet = false;
-    public CinemachineVirtualCamera virtualCamera; // Virtual Cameraをインスペクタから設定する
-    public Transform playerTransform; // PlayerのTransformをインスペクタから設定する
-    public float switchBackDelay = 2.0f; // カメラがプレイヤーに戻るまでの時間
 
-    private Transform originalFollowTarget;
-
-    void Start()
-    {
-        // カメラの元のFollowターゲットを保持
-        originalFollowTarget = virtualCamera.Follow;
-        if (virtualCamera.LookAt == null)
-        {
-            virtualCamera.LookAt = playerTransform; // プレイヤーのTransformをLookAtターゲットとして設定
-        }
-    }
-
-    void Update()
-    {
-        //if (!shotBullet)  //弾を一発撃つと、shotBulletがtrueになって撃てなくなる。
-        //{
-        // マウス左クリックで発射
-        if (Input.GetMouseButtonDown(0))
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
             Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
@@ -39,15 +17,6 @@ public class ShotGun : MonoBehaviour
 
             //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
 
-            //shotBullet = true;
-
-            // カメラのFollowを弾に変更
-            virtualCamera.Follow = bullet.transform;
-
-            // 弾にカメラをフォーカスした後、一定時間でカメラをプレイヤーに戻す
-            StartCoroutine(SwitchBackToPlayerAfterDelay());
-        }
-        //}
     }
 
     private IEnumerator SwitchBackToPlayerAfterDelay()
