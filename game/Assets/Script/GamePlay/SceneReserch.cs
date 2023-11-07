@@ -11,10 +11,10 @@ public class SceneReserch : MonoBehaviour
 
     void Setting(string name)
     {
-        switch (sceneName)
+        switch (name)
         {
             case "FirstStage":
-                bulletRefLimit = 4;
+                bulletRefLimit = 6;
                 break;
             case "SecondStage":
                 bulletRefLimit = 3;
@@ -43,7 +43,7 @@ public class SceneReserch : MonoBehaviour
 
     }
 
-    public void OnCollisionStay(Collision collision)
+    public void OnCollisionExit(Collision collision)
     {
         bulletCount++;
     }
