@@ -9,7 +9,7 @@ public class Next_Scene : MonoBehaviour
 
     public void ClickStartButton()
     {
-        SceneManager.LoadScene("Main_menu");
+        SceneManager.LoadScene("MainMenuNew");
     }
     public void ClickOperationButton()
     {
