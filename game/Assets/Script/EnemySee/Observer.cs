@@ -8,7 +8,7 @@ public class Observer : MonoBehaviour
     public Transform player;
     public GameObject GameOverWindow;
     bool m_IsPlayerInRange;
-    bool isGamePaused = false; // ƒQ[ƒ€‚Ìˆê’â~ó‘Ô
+    //bool isGamePaused = false; // ƒQ[ƒ€‚Ìˆê’â~ó‘Ô
 
     void OnTriggerEnter(Collider other)
     {
