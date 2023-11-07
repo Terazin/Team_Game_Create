@@ -435,7 +435,6 @@ RectTransform:
   m_Children:
   - {fileID: 189219387}
   - {fileID: 1667633919}
-  - {fileID: 445112611}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3916,8 +3915,6 @@ GameObject:
   - component: {fileID: 1667633919}
   - component: {fileID: 1667633921}
   - component: {fileID: 1667633920}
-  - component: {fileID: 1667633923}
-  - component: {fileID: 1667633922}
   m_Layer: 5
   m_Name: Logo
   m_TagString: Untagged
@@ -3942,7 +3939,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: -680, y: 25}
   m_SizeDelta: {x: 379, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667633920
