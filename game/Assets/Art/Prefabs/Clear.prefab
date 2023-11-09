@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4311059311354961953}
   - component: {fileID: 4311059311354961952}
+  - component: {fileID: 484709227043241134}
   m_Layer: 0
   m_Name: Clear
   m_TagString: Untagged
@@ -44,7 +45,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ec28b453001464cb8b96345a1cfe97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDestroy: {fileID: 0}
   enemyNum: 1
   destroyCount: 0
   NextStage: 
+  successShow: {fileID: 0}
+--- !u!114 &484709227043241134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4311059311354961967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf31415158cffc499482f081bc79acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
+  bulletRefLimit: 0
+  bullet: {fileID: 4000418471913843395, guid: b96cd4be6e5c6da46b1599f24ad16695, type: 3}
