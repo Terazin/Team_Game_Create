@@ -16,12 +16,12 @@ public class OperationInstructionsShow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && !IsPush)
+        if (Input.GetKeyDown("joystick button 2") && !IsPush)
         {
             operationInstructon.alpha = 1;
             IsPush = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Q) && IsPush)
+        else if (Input.GetKeyDown("joystick button 2") && IsPush)
         {
             operationInstructon.alpha -= 1;
             IsPush = false;
