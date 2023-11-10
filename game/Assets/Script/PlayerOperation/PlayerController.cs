@@ -12,30 +12,30 @@ public class PlayerController : MonoBehaviour
     private float gravity = 3f;
 
     // カメラの回転用
-    public float turnSpeed = 150f; // 追加: この数値を変更して、カメラの回転速度を調整できます。
-    private Transform camTransform;
+    //public float turnSpeed = 150f; // 追加: この数値を変更して、カメラの回転速度を調整できます。
+    //private Transform camTransform;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        camTransform = Camera.main.transform; // カメラのTransformを取得
+        //camTransform = Camera.main.transform; // カメラのTransformを取得
         speed = walkSpeed;
     }
 
     void Update()
     {
         PlayerMove();
-        CameraTurn(); // 追加: カメラの回転処理を呼び出し
+        //CameraTurn(); // 追加: カメラの回転処理を呼び出し
 
     }
 
     void PlayerMove()
     {
-        float moveH = Input.GetAxis("Horizontal");
-        float moveV = Input.GetAxis("Vertical");
-        movement = new Vector3(moveH, 0, moveV);
+        float moveH = Input.GetAxis("Axis X");
+        float moveV = Input.GetAxis("Axis Y");
+        movement = new Vector3(moveH, 0, -moveV);
 
-        Vector3 desiredMove = camTransform.forward * movement.z + camTransform.right * movement.x;
+        Vector3 desiredMove = Camera.main.transform.forward * movement.z + Camera.main.transform.right * movement.x;
         moveDir.x = desiredMove.x * 3f;
         moveDir.z = desiredMove.z * 3f;
         moveDir.y -= gravity * Time.deltaTime;
@@ -44,12 +44,12 @@ public class PlayerController : MonoBehaviour
     }
 
     // 追加: カメラの回転を制御
-    void CameraTurn()
-    {
-        float turnH = Input.GetAxis("RightStick Horizontal");
+    //void CameraTurn()
+    //{
+    //    float turnH = Input.GetAxis("RightStick Horizontal");
 
-        camTransform.Rotate(Vector3.up * turnH * turnSpeed * Time.deltaTime); // 水平方向の回転
-    }
+    //    camTransform.Rotate(Vector3.up * turnH * turnSpeed * Time.deltaTime); // 水平方向の回転
+    //}
 
 
 
