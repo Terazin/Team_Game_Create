@@ -7,6 +7,7 @@ public class ShotGun : MonoBehaviour
 {
     public GameObject bulletGun;
     public GameObject bulletPrefab;
+    public GameObject bulletDel;
     //public AudioClip shotSound;
     public CinemachineVirtualCamera virtualCamera;
     public float shotSpeed;
@@ -31,6 +32,7 @@ public class ShotGun : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
             Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
             bulletRb.AddForce(transform.forward * shotSpeed);
+            bulletDel = bullet;
 
             //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
             virtualCamera.Follow = bullet.transform;
