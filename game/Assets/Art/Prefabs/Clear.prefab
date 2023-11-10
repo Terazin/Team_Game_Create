@@ -45,9 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ec28b453001464cb8b96345a1cfe97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSceneUI: {fileID: 0}
   enemyNum: 2
   destroyCount: 0
-  NextStage: SecondStage
+  NextStage: Main_menu
   successShow: {fileID: 0}
 --- !u!114 &228612340524638710
 MonoBehaviour:
