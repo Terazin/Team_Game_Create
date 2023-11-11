@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9125356380995486059}
   - component: {fileID: 9125356380995486058}
   m_Layer: 0
-  m_Name: OpeInstShow
+  m_Name: InGame_UI_Show
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
