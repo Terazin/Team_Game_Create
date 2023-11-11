@@ -8,6 +8,7 @@ public class ShotGun : MonoBehaviour
     private Animator animator;
     public GameObject bulletGun;
     public GameObject bulletPrefab;
+    public GameObject bulletDel;
     //public AudioClip shotSound;
     public CinemachineVirtualCamera virtualCamera;
     public float shotSpeed;
