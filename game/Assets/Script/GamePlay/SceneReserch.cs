@@ -9,8 +9,9 @@ public class SceneReserch : MonoBehaviour
 {
     [SerializeField] ShotGun shotGun;
     string sceneName;
-    public int bulletRefLimit;
-    public int bulletRefCount;
+    public int bulletRefLimit; //各ステージの反射上限の定義（処理の関係上、上限に+1した値を代入）
+    public int bulletRefCount; //反射した回数を格納
+    public bool IsBulletDelete = false;
  
     void Setting(string name)
     {
@@ -51,7 +52,7 @@ public class SceneReserch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sceneName = SceneManager.GetActiveScene().name;
+        sceneName = SceneManager.GetActiveScene().name; //現在のシーン名の取得
         Setting(sceneName);
     }
 
@@ -62,8 +63,8 @@ public class SceneReserch : MonoBehaviour
         {
             if (bulletRefCount == bulletRefLimit)
             {
-                Destroy(shotGun.bulletDel);
-
+                Destroy(shotGun.bulletDel); //弾を消す方法が思いつかなかったため、シーン上に弾のインスタンスを作るために宣言したGameObject変数を呼び出している。
+                IsBulletDelete = true;
             }
         }
     }

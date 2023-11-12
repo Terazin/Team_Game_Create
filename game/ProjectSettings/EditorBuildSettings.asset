@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Title.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Art/UIElements/Title.unity
+    guid: 2b6516cc2b0a2bd4fa510e1939cbb43e
   - enabled: 1
-    path: Assets/Scenes/MainMenu/Main_menu.unity
-    guid: f7452fe343cb2a146b6ea4278f7df30a
+    path: Assets/Art/UIElements/MainMenuNew.unity
+    guid: 4911e47cbb1e4e64d9c6a5dfc4d42f34
   - enabled: 1
     path: Assets/Scenes/MainMenu/Operation.unity
     guid: 2e3a94abe0bac04428d4c33f1342a8f8
@@ -33,9 +33,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage/ThirdStage.unity
     guid: eb7aa35c0cc7c32459324c3f3c84a408
   - enabled: 1
-    path: Assets/Art/UIElements/Title.unity
-    guid: 2b6516cc2b0a2bd4fa510e1939cbb43e
+    path: Assets/Scenes/Stage/FourthStage.unity
+    guid: 33c39f663000d7a4cad1ce6a5f2f251c
   - enabled: 1
-    path: Assets/Art/UIElements/MainMenuNew.unity
-    guid: 4911e47cbb1e4e64d9c6a5dfc4d42f34
+    path: Assets/Scenes/Stage/FifthStage.unity
+    guid: 39e0153c9d28460499cf64f8dda201f1
+  - enabled: 1
+    path: Assets/Scenes/Stage/SixthStage.unity
+    guid: b8da0fb51b41d224b992ef0a678f35f1
   m_configObjects: {}

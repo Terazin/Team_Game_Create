@@ -22,7 +22,7 @@ public class EnemyDestroy : MonoBehaviour
         if (other.gameObject.tag == "Bullet")
         {
             animator.SetTrigger("EnemyDeath");//“G‚ª”šU‚·‚éƒAƒjƒ[ƒVƒ‡ƒ“ŒÄ‚Ño‚µ
-            Destroy(gameObject,3f);////“G‚ª”šU‚·‚é“r’†‚ÅÁ‚¦‚È‚¢‚æ‚¤‚É”í’e‚µ‚Ä‚©‚ç3•bŒã‚ÉÁ‚¦‚é‚æ‚¤‚É•ÏX
+            Destroy(gameObject,1f);////“G‚ª”šU‚·‚é“r’†‚ÅÁ‚¦‚È‚¢‚æ‚¤‚É”í’e‚µ‚Ä‚©‚ç3•bŒã‚ÉÁ‚¦‚é‚æ‚¤‚É•ÏX
             clear.destroyCount++;
         }
     }
