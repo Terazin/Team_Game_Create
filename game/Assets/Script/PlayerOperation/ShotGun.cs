@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ShotGun : MonoBehaviour
 {
+    private Animator animator;
     public GameObject bulletGun;
     public GameObject bulletPrefab;
     public GameObject bulletDel;
@@ -19,7 +20,8 @@ public class ShotGun : MonoBehaviour
 
     void Start()
     {
-        //originalFollowTarget = virtualCamera.Follow;
+        originalFollowTarget = virtualCamera.Follow;
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -32,7 +34,7 @@ public class ShotGun : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
             Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
             bulletRb.AddForce(transform.forward * shotSpeed);
-            bulletDel = bullet;
+            //animator.SetTrigger("GunFire");//銃の射撃アニメーション呼び出し
 
             //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
             //virtualCamera.Follow = bullet.transform;
@@ -41,8 +43,6 @@ public class ShotGun : MonoBehaviour
 
         //フラグの更新
         wasTriggerPressed = isTriggerPressed;
-
-
     }
 
     //private IEnumerator SwitchBackToPlayerAfterDelay()
