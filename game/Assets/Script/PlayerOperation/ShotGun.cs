@@ -10,7 +10,7 @@ public class ShotGun : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject bulletDel;
     //public AudioClip shotSound;
-    //public CinemachineVirtualCamera virtualCamera;
+    public CinemachineVirtualCamera virtualCamera;
     public float shotSpeed;
     public Transform playerTransform;
     public float switchBackDelay = 5.0f;
@@ -20,8 +20,8 @@ public class ShotGun : MonoBehaviour
 
     void Start()
     {
-        originalFollowTarget = virtualCamera.Follow;
-        animator = GetComponent<Animator>();
+        //originalFollowTarget = virtualCamera.Follow;
+        //animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -35,7 +35,7 @@ public class ShotGun : MonoBehaviour
             Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
             bulletRb.AddForce(transform.forward * shotSpeed);
             //animator.SetTrigger("GunFire");//銃の射撃アニメーション呼び出し
-
+            bulletDel = bullet;
             //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
             //virtualCamera.Follow = bullet.transform;
             //StartCoroutine(SwitchBackToPlayerAfterDelay());
