@@ -7,6 +7,7 @@ public class Observer : MonoBehaviour
 {
     public Transform player;
     public GameObject GameOverWindow;
+    private float lockRange = 200;
     bool m_IsPlayerInRange;
     //bool isGamePaused = false; // ƒQ[ƒ€‚Ìˆê’â~ó‘Ô
 
@@ -34,7 +35,7 @@ public class Observer : MonoBehaviour
             Ray ray = new Ray(transform.position, direction);
             RaycastHit raycastHit;
 
-            if (Physics.Raycast(ray, out raycastHit))
+            if (Physics.Raycast(ray, out raycastHit, lockRange)) 
             {
                 if (raycastHit.collider.transform == player)
                 {

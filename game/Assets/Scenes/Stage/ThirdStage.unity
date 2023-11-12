@@ -1632,7 +1632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a5c919ae697d74db95d88c4256688e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneReserch: {fileID: 1659151847}
+  sceneReserch: {fileID: 1349314924}
 --- !u!1001 &481171268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2296,6 +2296,7 @@ MonoBehaviour:
   bulletGun: {fileID: 1486997780}
   bulletPrefab: {fileID: 9173182356069293548, guid: b96cd4be6e5c6da46b1599f24ad16695, type: 3}
   bulletDel: {fileID: 0}
+  virtualCamera: {fileID: 0}
   shotSpeed: 1000
   playerTransform: {fileID: 1765261226}
   switchBackDelay: 3
@@ -3994,6 +3995,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 9042771077998628582, guid: 2e11327e88595ce42845cb9d46795abc, type: 3}
+--- !u!114 &1349314924 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 228612340524638710, guid: 6ccda1d3d2a663e4d9eee9b523411210, type: 3}
+  m_PrefabInstance: {fileID: 1659151846}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf31415158cffc499482f081bc79acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1356046811 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5903386287438877017, guid: 2e11327e88595ce42845cb9d46795abc, type: 3}
@@ -4841,19 +4853,19 @@ PrefabInstance:
     - target: {fileID: 3079277591786502009, guid: e6aa1e5e49401124c85ea36fa0e6cafa, type: 3}
       propertyPath: sceneReserch
       value: 
-      objectReference: {fileID: 1659151847}
+      objectReference: {fileID: 1349314924}
     - target: {fileID: 3079277592121533500, guid: e6aa1e5e49401124c85ea36fa0e6cafa, type: 3}
       propertyPath: sceneReserch
       value: 
-      objectReference: {fileID: 1659151847}
+      objectReference: {fileID: 1349314924}
     - target: {fileID: 3079277592193009555, guid: e6aa1e5e49401124c85ea36fa0e6cafa, type: 3}
       propertyPath: sceneReserch
       value: 
-      objectReference: {fileID: 1659151847}
+      objectReference: {fileID: 1349314924}
     - target: {fileID: 3079277592459062194, guid: e6aa1e5e49401124c85ea36fa0e6cafa, type: 3}
       propertyPath: sceneReserch
       value: 
-      objectReference: {fileID: 1659151847}
+      objectReference: {fileID: 1349314924}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6aa1e5e49401124c85ea36fa0e6cafa, type: 3}
 --- !u!1 &1912991139 stripped
@@ -5422,7 +5434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a5c919ae697d74db95d88c4256688e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneReserch: {fileID: 1659151847}
+  sceneReserch: {fileID: 1349314924}
 --- !u!1 &2056622332
 GameObject:
   m_ObjectHideFlags: 0
@@ -5533,7 +5545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a5c919ae697d74db95d88c4256688e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneReserch: {fileID: 1659151847}
+  sceneReserch: {fileID: 1349314924}
 --- !u!1001 &2100626037
 PrefabInstance:
   m_ObjectHideFlags: 0
