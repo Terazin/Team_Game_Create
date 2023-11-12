@@ -4,51 +4,79 @@ using UnityEngine;
 
 public class InGame_UI_Show : MonoBehaviour
 {
-    [SerializeField] CanvasGroup operationInstructon;
-    [SerializeField] CanvasGroup MapView;
-    [SerializeField] CanvasGroup gameSceneUI;
-    bool Is_X_Push = false;
-    bool Is_Y_Push = false;
-    int alphaNum = 1;
+    [SerializeField] GameObject operationInstructon;
+    [SerializeField] GameObject MapView;
+    [SerializeField] GameObject gameSceneUI; //X,Yボタンの処理が行われる際、通常UIを消すために宣言
+    [SerializeField] PopupScript popupScript; //インゲーム冒頭のマップ表示を管理しているPopupScriptを宣言
+    bool Is_X_Push = false; //Xボタンが押されているか
+    bool Is_Y_Push = false; //Yボタンが押されているか
+    bool Is_Popup_Show = false; //マップが表示されたか
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        popupScript.Appear(); //Start()関数を使って、一度だけAppear()を実行 マップを表示
+        Is_Popup_Show = true; //シーンで一度だけ処理を行うようにするために必要
+        gameSceneUI.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!Is_X_Push && !Is_Y_Push) 
+        //インゲーム冒頭マップ表示処理
+
+        if (Is_Popup_Show)
         {
-            if (Input.GetKeyDown("joystick button 2"))
+            SetGamePaused(true);
+            if (Input.GetKeyDown("joystick button 1")) //Aボタンを検知
             {
-                operationInstructon.alpha = alphaNum;
-                gameSceneUI.alpha -= alphaNum;
-                Is_X_Push = true;
-            }
-            else if (Input.GetKeyDown("joystick button 3"))
-            {
-                MapView.alpha = alphaNum;
-                gameSceneUI.alpha -= alphaNum;
-                Is_Y_Push = true;
+                popupScript.Delete();
+                Is_Popup_Show = false; //このシーンが終わるまで、このboolがtrueになることは無い。
+                gameSceneUI.SetActive(true);
+                SetGamePaused(false);
             }
         }
         else
         {
-            if ((Input.GetKeyDown("joystick button 2")) && Is_X_Push) 
+            //XボタンとYボタンの検知
+
+            if (!Is_X_Push && !Is_Y_Push) //一方のボタンが押されたとき、もう一方のボタンの動作が行われないようにする。
             {
-                operationInstructon.alpha -= alphaNum;
-                gameSceneUI.alpha = alphaNum;
-                Is_X_Push = false;
+                if (Input.GetKeyDown("joystick button 2"))
+                {
+                    operationInstructon.SetActive(true);
+                    gameSceneUI.SetActive(false);
+                    Is_X_Push = true;
+                }
+                else if (Input.GetKeyDown("joystick button 3"))
+                {
+                    MapView.SetActive(true);
+                    gameSceneUI.SetActive(false);
+                    Is_Y_Push = true;
+                }
             }
-            else if ((Input.GetKeyDown("joystick button 3")) && Is_Y_Push) 
+            else
             {
-                MapView.alpha -= alphaNum;
-                gameSceneUI.alpha = alphaNum;
-                Is_Y_Push = false;
+                if ((Input.GetKeyDown("joystick button 2")) && Is_X_Push)
+                {
+                    operationInstructon.SetActive(false);
+                    gameSceneUI.SetActive(true);
+                    Is_X_Push = false;
+                }
+                else if ((Input.GetKeyDown("joystick button 3")) && Is_Y_Push)
+                {
+                    MapView.SetActive(false);
+                    gameSceneUI.SetActive(true);
+                    Is_Y_Push = false;
+                }
             }
-        }
+        }       
+    }
+
+    void SetGamePaused(bool isPaused)
+    {
+        Time.timeScale = isPaused ? 0.0f : 1.0f;
     }
 }

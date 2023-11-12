@@ -41,6 +41,22 @@ public class LoadScript : MonoBehaviour
     {
         StartCoroutine(LoadScene("ThirdStage"));
     }
+    public void ClickFourthStageButton()
+    {
+        StartCoroutine(LoadScene("FourthStage"));
+    }
+    public void ClickFivethStageButton()
+    {
+        StartCoroutine(LoadScene("FifthStage"));
+    }
+    public void ClickSixthStageButton()
+    {
+        StartCoroutine(LoadScene("SixthStage"));
+    }
+    public void ClickMainMenuButton()
+    {
+        StartCoroutine(LoadScene("MainMenuNew"));
+    }
     public IEnumerator LoadScene(string sceneName)
     {
         async = SceneManager.LoadSceneAsync(sceneName);
