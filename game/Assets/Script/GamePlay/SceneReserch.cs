@@ -14,37 +14,37 @@ public class SceneReserch : MonoBehaviour
  
     void Setting(string name)
     {
-        switch (name) //反射回数の定義
+        switch (name) //反射回数の定義(処理の関係上、反射回数に+1した値になっている。)
         {
             case "FirstStage":
-                bulletRefLimit = 3;
-                break;
-            case "SecondStage":
-                bulletRefLimit = 3;
-                break;
-            case "ThirdStage":
-                bulletRefLimit = 5;
-                break;
-            case "FourthStage":
                 bulletRefLimit = 2;
                 break;
-            case "FifthStage":
-                bulletRefLimit = 4;
+            case "SecondStage":
+                bulletRefLimit = 5;
                 break;
-            case "SixthStage":
-                bulletRefLimit = 4;
-                break;
-            case "SeventhStage":
+            case "ThirdStage":
                 bulletRefLimit = 6;
                 break;
-            case "EighthStage":
+            case "FourthStage":
                 bulletRefLimit = 3;
                 break;
-            case "NinethStage":
+            case "FifthStage":
+                bulletRefLimit = 8;
+                break;
+            case "SixthStage":
+                bulletRefLimit = 3;
+                break;
+            case "SeventhStage":
+                bulletRefLimit = 7;
+                break;
+            case "EighthStage":
                 bulletRefLimit = 4;
                 break;
+            case "NinethStage":
+                bulletRefLimit = 5;
+                break;
             case "TenthStage":
-                bulletRefLimit = 8;
+                bulletRefLimit = 9;
                 break;
         }
     }
