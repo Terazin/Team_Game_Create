@@ -10,7 +10,7 @@ public class ShotGun : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject bulletDel;
     //public AudioClip shotSound;
-    public CinemachineVirtualCamera virtualCamera;
+    //public CinemachineVirtualCamera virtualCamera;
     public float shotSpeed;
     public Transform playerTransform;
     public float switchBackDelay = 5.0f;
@@ -37,33 +37,33 @@ public class ShotGun : MonoBehaviour
             //animator.SetTrigger("GunFire");//銃の射撃アニメーション呼び出し
 
             //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
-            virtualCamera.Follow = bullet.transform;
-            StartCoroutine(SwitchBackToPlayerAfterDelay());
+            //virtualCamera.Follow = bullet.transform;
+            //StartCoroutine(SwitchBackToPlayerAfterDelay());
         }
 
         //フラグの更新
         wasTriggerPressed = isTriggerPressed;
     }
 
-    private IEnumerator SwitchBackToPlayerAfterDelay()
-    {
-        yield return new WaitForSeconds(switchBackDelay);
-        // キャラクターのy軸の回転をカメラのy軸の回転に一致させる
-        Vector3 newRotation = new Vector3(transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, transform.eulerAngles.z);
-        transform.eulerAngles = newRotation;
-        Debug.Log("Switching back to player.");
+    //private IEnumerator SwitchBackToPlayerAfterDelay()
+    //{
+    //    yield return new WaitForSeconds(switchBackDelay);
+    //    // キャラクターのy軸の回転をカメラのy軸の回転に一致させる
+    //    Vector3 newRotation = new Vector3(transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, transform.eulerAngles.z);
+    //    transform.eulerAngles = newRotation;
+    //    Debug.Log("Switching back to player.");
 
-    // デバッグログを出力して、カメラがプレイヤーに戻ったかを確認
-    if (virtualCamera.Follow == originalFollowTarget)
-    {
-        Debug.Log("Camera has switched back to the player.");
-    }
-    else
-    {
-        Debug.Log("Camera did not switch back to the player.");
-    }
+    //// デバッグログを出力して、カメラがプレイヤーに戻ったかを確認
+    //if (virtualCamera.Follow == originalFollowTarget)
+    //{
+    //    Debug.Log("Camera has switched back to the player.");
+    //}
+    //else
+    //{
+    //    Debug.Log("Camera did not switch back to the player.");
+    //}
 
-        // カメラのFollowをプレイヤーに戻す
-        virtualCamera.Follow = originalFollowTarget;
-    }
+    //    // カメラのFollowをプレイヤーに戻す
+    //    virtualCamera.Follow = originalFollowTarget;
+    //}
 }

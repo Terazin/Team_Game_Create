@@ -1902,6 +1902,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1672733567, guid: f88aa3f4ed2acbb4d98c5ca2c5361700, type: 3}
+      propertyPath: aimImage
+      value: 
+      objectReference: {fileID: 1420126361}
     - target: {fileID: 5333188955747305652, guid: f88aa3f4ed2acbb4d98c5ca2c5361700, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1994,7 +1998,6 @@ MonoBehaviour:
   bulletGun: {fileID: 683659842}
   bulletPrefab: {fileID: 9173182356069293548, guid: b96cd4be6e5c6da46b1599f24ad16695, type: 3}
   bulletDel: {fileID: 0}
-  virtualCamera: {fileID: 1149587057}
   shotSpeed: 1000
   playerTransform: {fileID: 1765261226}
   switchBackDelay: 3
@@ -2883,7 +2886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149587056}
   m_LocalRotation: {x: -0.035209253, y: -0.74339443, z: 0.039325316, w: -0.66676724}
-  m_LocalPosition: {x: -14.33, y: -7.59, z: -4.1200004}
+  m_LocalPosition: {x: -14.488, y: -8.31, z: -4.1200004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3495,6 +3498,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7078632329721667668, guid: 2e11327e88595ce42845cb9d46795abc, type: 3}
+--- !u!114 &1420126361 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7345067232502549400, guid: d199aa88bf550594693b7f2c1538d041, type: 3}
+  m_PrefabInstance: {fileID: 1395357963}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1437830595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -658445816637125598, guid: 2e11327e88595ce42845cb9d46795abc, type: 3}
@@ -3972,6 +3986,10 @@ PrefabInstance:
       propertyPath: shotGun
       value: 
       objectReference: {fileID: 683659843}
+    - target: {fileID: 4311059311354961952, guid: 6ccda1d3d2a663e4d9eee9b523411210, type: 3}
+      propertyPath: enemyNum
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4311059311354961952, guid: 6ccda1d3d2a663e4d9eee9b523411210, type: 3}
       propertyPath: NextStage
       value: Main_menu
@@ -5167,7 +5185,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959354871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.33, y: -7.59, z: -4.1200004}
+  m_LocalPosition: {x: -14.488, y: -8.31, z: -4.1200004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
