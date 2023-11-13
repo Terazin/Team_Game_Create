@@ -7,9 +7,12 @@ public class InGame_UI_Show : MonoBehaviour
     [SerializeField] GameObject operationInstructon;
     [SerializeField] GameObject MapView;
     [SerializeField] GameObject gameSceneUI; //X,Yボタンの処理が行われる際、通常UIを消すために宣言
+    [SerializeField] GameObject Pause;
     [SerializeField] PopupScript popupScript; //インゲーム冒頭のマップ表示を管理しているPopupScriptを宣言
+    
     bool Is_X_Push = false; //Xボタンが押されているか
     bool Is_Y_Push = false; //Yボタンが押されているか
+    bool Is_START_Push = false; //STARTボタンが押されているか
     bool Is_Popup_Show = false; //マップが表示されたか
 
     
@@ -42,7 +45,7 @@ public class InGame_UI_Show : MonoBehaviour
         {
             //XボタンとYボタンの検知
 
-            if (!Is_X_Push && !Is_Y_Push) //一方のボタンが押されたとき、もう一方のボタンの動作が行われないようにする。
+            if (!Is_X_Push && !Is_Y_Push && !Is_START_Push)  //一方のボタンが押されたとき、他のボタンの動作が行われないようにする。
             {
                 if (Input.GetKeyDown("joystick button 2"))
                 {
@@ -55,6 +58,12 @@ public class InGame_UI_Show : MonoBehaviour
                     MapView.SetActive(true);
                     gameSceneUI.SetActive(false);
                     Is_Y_Push = true;
+                }
+                else if (Input.GetKeyDown("joystick button 7"))
+                {
+                    Pause.SetActive(true);
+                    gameSceneUI.SetActive(false);
+                    Is_START_Push = true;
                 }
             }
             else
@@ -70,6 +79,12 @@ public class InGame_UI_Show : MonoBehaviour
                     MapView.SetActive(false);
                     gameSceneUI.SetActive(true);
                     Is_Y_Push = false;
+                }
+                else if ((Input.GetKeyDown("joystick button 7")) && Is_START_Push)
+                {
+                    Pause.SetActive(false);
+                    gameSceneUI.SetActive(true);
+                    Is_START_Push = false;
                 }
             }
         }       

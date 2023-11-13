@@ -10,6 +10,8 @@ public class GameTimer : MonoBehaviour
     [SerializeField] GameObject gameSceneUI;
     [SerializeField] GameObject operationInstructon;
     [SerializeField] GameObject MapView;
+    [SerializeField] GameObject Pause;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,7 @@ public class GameTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (operationInstructon.activeSelf || MapView.activeSelf)
+        if (operationInstructon.activeSelf || MapView.activeSelf || Pause.activeSelf) 
         {
             SetGamePaused(true);
         }
