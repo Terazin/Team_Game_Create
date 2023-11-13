@@ -10,10 +10,10 @@ public class End : MonoBehaviour
 
     void Start()
     {
-        canvas.enabled = false;
+      //  canvas.enabled = false;
     }
 
-    public void OnApplicationQuit()
+   /* public void OnApplicationQuit()
     {
         // ダイアログが開いていなければ終了処理はキャンセル
         if (canvas.enabled == false)
@@ -21,7 +21,7 @@ public class End : MonoBehaviour
 
         // ダイアログの表示
         canvas.enabled = true;
-    }
+    }*/
 
 
     //  終了ボタン

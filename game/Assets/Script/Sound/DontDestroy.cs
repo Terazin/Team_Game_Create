@@ -1,19 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DontDestroy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // 特定のシーン名
+    public string targetSceneName = "FirstStage";
+
+    private void Start()
     {
         DontDestroyOnLoad(this);
+        SceneManager.sceneLoaded += OnSceneLoaded; // シーンがロードされた時のイベントにメソッドを追加
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
+        // 特定のシーンに移動したら、このオブジェクトを破棄
+        if (scene.name == targetSceneName)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -302,6 +302,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00d44a06f6480d2489de3367fae9d92d, type: 3}
+--- !u!1001 &113503275
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5550274660737844134, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1c64bd3a6ecc5c4409e8aa874c7315bf, type: 3}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 296.3966
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 222.95374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -143.79985
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844153, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_Name
+      value: GameObject_BGM
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8726112453638741683, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
 --- !u!1 &159011708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,8 +1987,40 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6099800089077584851, guid: 2e11327e88595ce42845cb9d46795abc, type: 3}
---- !u!1001 &1205195029
-PrefabInstance:
+--- !u!1 &1236217804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1236217806}
+  - component: {fileID: 1236217805}
+  m_Layer: 0
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1236217805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236217804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d670b8a0c4d2bbf42a67668eb097082c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: 30
+  TimerText: {fileID: 1360424464}
+  Game0verWindow: {fileID: 1611219446}
+--- !u!4 &1236217806
+Transform:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
@@ -2116,6 +2210,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 1
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 30
+--- !u!222 &1360424465
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360424463}
+  m_CullTransparentMesh: 1
+--- !u!224 &1360424466
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360424463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 670337788}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 514.4, y: 176}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!64 &1383665095
 MeshCollider:
   m_ObjectHideFlags: 0
