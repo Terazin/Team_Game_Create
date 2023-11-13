@@ -7,6 +7,7 @@ public class PlayingViewChange : MonoBehaviour
 {
     [SerializeField] ShotGun shotGun;
     [SerializeField] SceneReserch sceneReserch;
+    [SerializeField] GameObject Player;
 
     public CinemachineVirtualCameraBase PlayerCamera;
     public CinemachineVirtualCameraBase UpCamera;
@@ -24,6 +25,7 @@ public class PlayingViewChange : MonoBehaviour
         {
             if (sceneReserch.IsBulletDelete)
             {
+                Player.SetActive(true);
                 PlayerCamera.Priority = 1;
                 UpCamera.Priority = 0;
             }
@@ -31,6 +33,7 @@ public class PlayingViewChange : MonoBehaviour
             {
                 PlayerCamera.Priority = 0;
                 UpCamera.Priority = 1;
+                Player.SetActive(false);
             }
         }
     }

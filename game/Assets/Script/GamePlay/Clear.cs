@@ -24,19 +24,33 @@ public class Clear : MonoBehaviour
     {
         if ((destroyCount == enemyNum) && sceneReserch.IsBulletDelete)
         {
+            StartCoroutine(SuccessJudge());
+        }
+        else if ((destroyCount != enemyNum) && sceneReserch.IsBulletDelete)
+        {
+            StartCoroutine(SuccessJudge());
+        }       
+    }
+
+    private IEnumerator SuccessJudge(){
+
+        yield return new WaitForSeconds(1.5f);
+
+        GameObject[] enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
+
+        if (enemyObjects.Length == 0) 
+        {
             successShow.SetActive(true);
             gameSceneUI.SetActive(false);
             SetGamePaused(true);
         }
-        else if ((destroyCount != enemyNum) && sceneReserch.IsBulletDelete)
+        else
         {
             GameOverWindow.SetActive(true);
             gameSceneUI.SetActive(false);
             enabled = false;
             SetGamePaused(true); // ÉQÅ[ÉÄÇÃéûä‘Çí‚é~
         }
-
-        
     }
 
     void SetGamePaused(bool isPaused)
