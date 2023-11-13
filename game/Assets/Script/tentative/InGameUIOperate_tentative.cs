@@ -17,7 +17,7 @@ public class InGameUIOperate_tentative : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         sceneName = SceneManager.GetActiveScene().name;
     }
 
