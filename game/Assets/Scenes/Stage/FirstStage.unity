@@ -302,6 +302,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00d44a06f6480d2489de3367fae9d92d, type: 3}
+--- !u!1001 &113503275
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5550274660737844134, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1c64bd3a6ecc5c4409e8aa874c7315bf, type: 3}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 296.3966
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 222.95374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -143.79985
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844135, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550274660737844153, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+      propertyPath: m_Name
+      value: GameObject_BGM
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8726112453638741683, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 0dec44c6cb47b8d43937eb28cd95656c, type: 3}
 --- !u!1 &159011708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,7 +1930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d670b8a0c4d2bbf42a67668eb097082c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Timer: 10
+  Timer: 30
   TimerText: {fileID: 1360424464}
   Game0verWindow: {fileID: 1611219446}
 --- !u!4 &1236217806
@@ -2047,7 +2109,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 60q
+  m_Text: 30
 --- !u!222 &1360424465
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2073,7 +2135,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 495, y: 104}
+  m_AnchoredPosition: {x: 514.4, y: 176}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!64 &1383665095
@@ -2918,7 +2980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 699504215265145608, guid: 45d329010a13bb04cb06cde34400f1b9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 699504215265145612, guid: 45d329010a13bb04cb06cde34400f1b9, type: 3}
       propertyPath: m_Pivot.x
