@@ -45,3 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   operationInstructon: {fileID: 0}
+  MapView: {fileID: 0}
+  gameSceneUI: {fileID: 0}
+  popupScript: {fileID: 0}
