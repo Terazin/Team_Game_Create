@@ -10,13 +10,14 @@ public class ShotGun : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject bulletDel;
     //public AudioClip shotSound;
-    public CinemachineVirtualCamera virtualCamera;
+    //public CinemachineVirtualCamera virtualCamera;
     public float shotSpeed;
-    public Transform playerTransform;
+    //public Transform playerTransform;
     public float switchBackDelay = 5.0f;
 
-    private bool wasTriggerPressed = false;// 前回のフレームでRTボタンが押されていたかのフラグ
-    private Transform originalFollowTarget;
+    //private bool wasTriggerPressed = false;// 前回のフレームでRTボタンが押されていたかのフラグ
+    //private Transform originalFollowTarget;
+    public bool IsShot = false;
 
     void Start()
     {
@@ -28,21 +29,26 @@ public class ShotGun : MonoBehaviour
         // コントローラーのRTボタンでの入力を取得
         bool isTriggerPressed = Input.GetAxis("TriggerRight") > 0.1f;
 
-        // 前回のフレームでは押されておらず、現在のフレームで押されている場合に弾を発射
-        if (!wasTriggerPressed && isTriggerPressed)
+        if (!IsShot)
         {
-            GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
-            Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
-            bulletRb.AddForce(transform.forward * shotSpeed);
-            //animator.SetTrigger("GunFire");//銃の射撃アニメーション呼び出し
-            bulletDel = bullet;
-            //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
-            //virtualCamera.Follow = bullet.transform;
-            //StartCoroutine(SwitchBackToPlayerAfterDelay());
+            // 前回のフレームでは押されておらず、現在のフレームで押されている場合に弾を発射
+            if (isTriggerPressed)  
+            {
+                GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
+                Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+                bulletRb.AddForce(transform.forward * shotSpeed);
+                //animator.SetTrigger("GunFire");//銃の射撃アニメーション呼び出し
+                bulletDel = bullet;
+                //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
+                //virtualCamera.Follow = bullet.transform;
+                //StartCoroutine(SwitchBackToPlayerAfterDelay());
+                IsShot = true;
+            }
         }
+        
 
         //フラグの更新
-        wasTriggerPressed = isTriggerPressed;
+        //wasTriggerPressed = isTriggerPressed;
     }
 
     //private IEnumerator SwitchBackToPlayerAfterDelay()
