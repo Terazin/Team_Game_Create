@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ShotGun : MonoBehaviour
 {
-    private Animator animator;
     public GameObject bulletGun;
     public GameObject bulletPrefab;
     public GameObject bulletDel;
@@ -22,7 +21,6 @@ public class ShotGun : MonoBehaviour
     void Start()
     {
         //originalFollowTarget = virtualCamera.Follow;
-        //animator = GetComponent<Animator>();
     }
     void Update()
     {
