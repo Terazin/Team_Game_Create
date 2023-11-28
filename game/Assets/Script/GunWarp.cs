@@ -11,11 +11,11 @@ public class GunWarp : MonoBehaviour
 
     void Update()
     {
-        float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+      /*  float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         float moveZ = Input.GetAxis("Vertical") * Time.deltaTime * speed;
         transform.position = new Vector3(
             transform.position.x + moveX, transform.position.y, transform.position.z + moveZ
-        );
+        );*/
     }
 
     void OnCollisionEnter(Collision other)
@@ -25,18 +25,12 @@ public class GunWarp : MonoBehaviour
             // ワープ先の位置にワープ
             this.transform.position = warpTarget.position;
 
-            // 吹っ飛ばしの力を追加
+            // Rigidbody コンポーネントを取得
             Rigidbody rb = GetComponent<Rigidbody>();
             if (rb != null)
             {
-                // 吹っ飛ばす方向を指定（例：上方向に力を加える）
-                Vector3 forceDirection = Vector3.right;
-
-                // 吹っ飛ばす力を調整
-                float forceMagnitude = 10.0f;
-
-                // 力を加える
-                rb.AddForce(forceDirection * forceMagnitude, ForceMode.Impulse);
+                // 速度をリセット（ゼロにする）
+                rb.velocity = Vector3.zero;
             }
         }
     }
