@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1274,8 +1274,8 @@ MonoBehaviour:
         m_Action: Left Button
         m_Flags: 0
       - m_Name: 
-        m_Id: 3094190c-9464-4faf-914a-7fb6f4d4c1a7
-        m_Path: <Gamepad>/buttonWest
+        m_Id: e5e1c30d-005e-4701-b980-9120aaab1178
+        m_Path: <Gamepad>/buttonEast
         m_Interactions: 
         m_Processors: 
         m_Groups: 
@@ -1489,6 +1489,19 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3652153063725782559, guid: 1436e74fab8de65458531eaf69992035, type: 3}
   m_PrefabInstance: {fileID: 3652153064264733071}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &543180692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543180687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5475403eefce543428d0188a58d41aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Popup: {fileID: 1697122236}
 --- !u!1 &689684162
 GameObject:
   m_ObjectHideFlags: 0
@@ -3475,6 +3488,7 @@ GameObject:
   - component: {fileID: 1410136414}
   - component: {fileID: 1410136413}
   - component: {fileID: 1410136415}
+  - component: {fileID: 1410136416}
   m_Layer: 5
   m_Name: LoadPanel
   m_TagString: Untagged
@@ -3552,6 +3566,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ebac4b2f8158844ea4ef586e361433f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1410136416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410136411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0cf8eb271844b4c808bdef1907c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1522176621
@@ -5902,6 +5928,22 @@ PrefabInstance:
     - target: {fileID: 3652153063725782557, guid: 1436e74fab8de65458531eaf69992035, type: 3}
       propertyPath: m_FillAmount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652153063725782558, guid: 1436e74fab8de65458531eaf69992035, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652153063725782558, guid: 1436e74fab8de65458531eaf69992035, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 543180692}
+    - target: {fileID: 3652153063725782558, guid: 1436e74fab8de65458531eaf69992035, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Appear
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652153063725782558, guid: 1436e74fab8de65458531eaf69992035, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopupScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3652153063725782559, guid: 1436e74fab8de65458531eaf69992035, type: 3}
       propertyPath: m_Pivot.x

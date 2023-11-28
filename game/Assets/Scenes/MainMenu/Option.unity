@@ -1700,8 +1700,8 @@ MonoBehaviour:
         m_Action: Left Button
         m_Flags: 0
       - m_Name: 
-        m_Id: 2f98eb9e-6523-42f4-b1c7-0e17a7744550
-        m_Path: <Gamepad>/buttonWest
+        m_Id: abf060a7-4dc0-42ae-9288-4d5aa7601154
+        m_Path: <Gamepad>/buttonEast
         m_Interactions: 
         m_Processors: 
         m_Groups: 

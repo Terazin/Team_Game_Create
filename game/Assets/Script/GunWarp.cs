@@ -11,11 +11,11 @@ public class GunWarp : MonoBehaviour
 
     void Update()
     {
-        float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+      /*  float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         float moveZ = Input.GetAxis("Vertical") * Time.deltaTime * speed;
         transform.position = new Vector3(
             transform.position.x + moveX, transform.position.y, transform.position.z + moveZ
-        );
+        );*/
     }
 
     void OnCollisionEnter(Collision other)
@@ -24,6 +24,14 @@ public class GunWarp : MonoBehaviour
         {
             // ワープ先の位置にワープ
             this.transform.position = warpTarget.position;
+
+            // Rigidbody コンポーネントを取得
+            Rigidbody rb = GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                // 速度をリセット（ゼロにする）
+                rb.velocity = Vector3.zero;
+            }
         }
     }
 }
