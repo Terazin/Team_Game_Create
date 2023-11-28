@@ -32,42 +32,23 @@ public class ShotGun : MonoBehaviour
             // 前回のフレームでは押されておらず、現在のフレームで押されている場合に弾を発射
             if (isTriggerPressed)  
             {
-                GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
-                Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
-                bulletRb.AddForce(transform.forward * shotSpeed);
-                //animator.SetTrigger("GunFire");//銃の射撃アニメーション呼び出し
-                bulletDel = bullet;
-                //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
-                //virtualCamera.Follow = bullet.transform;
-                //StartCoroutine(SwitchBackToPlayerAfterDelay());
-                IsShot = true;
+                StartCoroutine(Shot());
             }
         }
-        
-
-        //フラグの更新
-        //wasTriggerPressed = isTriggerPressed;
     }
 
-    //private IEnumerator SwitchBackToPlayerAfterDelay()
-    //{
-    //    yield return new WaitForSeconds(switchBackDelay);
-    //    // キャラクターのy軸の回転をカメラのy軸の回転に一致させる
-    //    Vector3 newRotation = new Vector3(transform.eulerAngles.x, Camera.main.transform.eulerAngles.y, transform.eulerAngles.z);
-    //    transform.eulerAngles = newRotation;
-    //    Debug.Log("Switching back to player.");
+    private IEnumerator Shot()
+    {
+        yield return new WaitForSeconds(2f);
 
-    //// デバッグログを出力して、カメラがプレイヤーに戻ったかを確認
-    //if (virtualCamera.Follow == originalFollowTarget)
-    //{
-    //    Debug.Log("Camera has switched back to the player.");
-    //}
-    //else
-    //{
-    //    Debug.Log("Camera did not switch back to the player.");
-    //}
-
-    //    // カメラのFollowをプレイヤーに戻す
-    //    virtualCamera.Follow = originalFollowTarget;
-    //}
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
+        Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+        bulletRb.AddForce(transform.forward * shotSpeed);
+        //animator.SetTrigger("GunFire");//銃の射撃アニメーション呼び出し
+        bulletDel = bullet;
+        //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
+        //virtualCamera.Follow = bullet.transform;
+        //StartCoroutine(SwitchBackToPlayerAfterDelay());
+        IsShot = true;
+    }
 }
