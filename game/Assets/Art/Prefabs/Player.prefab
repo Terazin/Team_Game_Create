@@ -154,6 +154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 217194157236336973}
   - component: {fileID: 6592264316445548235}
+  - component: {fileID: 3411466815824309974}
   m_Layer: 0
   m_Name: gun-v4 with animation
   m_TagString: Untagged
@@ -169,7 +170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596850387851207671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14999963, y: 0, z: 0.819}
+  m_LocalPosition: {x: 0.14999963, y: 0.166, z: 0.759}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -220,6 +221,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3411466815824309974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596850387851207671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c53204511db4244db43aa15ec7627b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &626598554504663915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,7 +1085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &684894317951690590
 Transform:
   m_ObjectHideFlags: 0
@@ -2194,7 +2207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5165720318757819529}
   m_LocalRotation: {x: -0.5000003, y: 0.49999973, z: 0.49999973, w: 0.5000003}
-  m_LocalPosition: {x: 0, y: 0.000000014901161, z: -0.0010000467}
+  m_LocalPosition: {x: 0, y: 0.000000014901161, z: -0.0010001063}
   m_LocalScale: {x: 0.99, y: 0.99, z: 0.99}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3618,7 +3631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9039454077850461860
 Transform:
   m_ObjectHideFlags: 0
