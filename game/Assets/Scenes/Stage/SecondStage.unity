@@ -1953,6 +1953,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 611744324}
     - target: {fileID: 2985404258579892669, guid: ca5ba2683f3ec9641959871023d6c97e, type: 3}
+      propertyPath: Timer
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985404258579892669, guid: ca5ba2683f3ec9641959871023d6c97e, type: 3}
       propertyPath: MapView
       value: 
       objectReference: {fileID: 1445036803}
