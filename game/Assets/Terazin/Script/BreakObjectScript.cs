@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Converters;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,9 @@ using UnityEngine;
 public class BreakObjectScript : MonoBehaviour
 {
     [SerializeField] private GameObject Particle;
+    [SerializeField] EnemyDestroy enemyDestroy;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +24,8 @@ public class BreakObjectScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-            Destroy(gameObject);
+            enemyDestroy.IsBoxDel = true;
+            Destroy(gameObject);            
             Instantiate(Particle, this.transform.position, Quaternion.identity);
         }
     }
