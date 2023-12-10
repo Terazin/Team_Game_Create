@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class InGame_UI_Show : MonoBehaviour
 {
@@ -11,7 +13,9 @@ public class InGame_UI_Show : MonoBehaviour
     [SerializeField] GameObject GameOverUI;
     [SerializeField] GameObject SuccessUI;
     [SerializeField] PopupScript popupScript; //インゲーム冒頭のマップ表示を管理しているPopupScriptを宣言
-    
+
+    [SerializeField] Button pauseFirstButton;
+
     bool Is_X_Push = false; //Xボタンが押されているか
     bool Is_Y_Push = false; //Yボタンが押されているか
     bool Is_START_Push = false; //STARTボタンが押されているか
@@ -66,6 +70,10 @@ public class InGame_UI_Show : MonoBehaviour
                     Pause.SetActive(true);
                     gameSceneUI.SetActive(false);
                     Is_START_Push = true;
+                    //初期選択ボタンの初期化
+                    EventSystem.current.SetSelectedGameObject(null);
+                    //初期選択ボタンの再指定
+                    pauseFirstButton.Select();
                 }
             }
             else
