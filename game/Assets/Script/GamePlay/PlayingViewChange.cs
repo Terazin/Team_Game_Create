@@ -8,11 +8,9 @@ public class PlayingViewChange : MonoBehaviour
     [SerializeField] ShotGun shotGun;
     [SerializeField] SceneReserch sceneReserch;
     [SerializeField] GameObject Player;
-    [SerializeField] Clear Clear;
 
     public CinemachineVirtualCameraBase PlayerCamera;
     public CinemachineVirtualCameraBase UpCamera;
-    public CinemachineVirtualCameraBase FinishedCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,18 +23,24 @@ public class PlayingViewChange : MonoBehaviour
 
         if (shotGun.IsShot)
         {
-            if (sceneReserch.IsBulletDelete)
-            {
-                Player.SetActive(true);
-                PlayerCamera.Priority = 1;
-                UpCamera.Priority = 0;
-            }
-            else
+            if (sceneReserch.bulletRefCount == 1)
             {
                 PlayerCamera.Priority = 0;
                 UpCamera.Priority = 1;
                 Player.SetActive(false);
             }
+            //if (sceneReserch.IsBulletDelete)
+            //{
+            //    Player.SetActive(true);
+            //    PlayerCamera.Priority = 1;
+            //    UpCamera.Priority = 0;
+            //}
+            //else
+            //{
+            //    PlayerCamera.Priority = 0;
+            //    UpCamera.Priority = 1;
+            //    Player.SetActive(false);
+            //}
         }
     }
 }
