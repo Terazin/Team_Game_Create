@@ -32,23 +32,33 @@ public class ShotGun : MonoBehaviour
             // 前回のフレームでは押されておらず、現在のフレームで押されている場合に弾を発射
             if (isTriggerPressed)  
             {
-                StartCoroutine(Shot());
+                //yield return new WaitForSeconds(0.3f);
+
+                GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
+                Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+                bulletRb.AddForce(transform.forward * shotSpeed);
+                //animator.SetTrigger("GunFire");//銃の射撃アニメーション呼び出し
+                bulletDel = bullet;
+                //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
+                //virtualCamera.Follow = bullet.transform;
+                //StartCoroutine(SwitchBackToPlayerAfterDelay());
+                IsShot = true;
             }
         }
     }
 
-    private IEnumerator Shot()
-    {
-        yield return new WaitForSeconds(2f);
+    //private IEnumerator Shot()
+    //{
+    //    yield return new WaitForSeconds(0.3f);
 
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
-        Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
-        bulletRb.AddForce(transform.forward * shotSpeed);
-        //animator.SetTrigger("GunFire");//銃の射撃アニメーション呼び出し
-        bulletDel = bullet;
-        //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
-        //virtualCamera.Follow = bullet.transform;
-        //StartCoroutine(SwitchBackToPlayerAfterDelay());
-        IsShot = true;
-    }
+    //    GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
+    //    Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+    //    bulletRb.AddForce(transform.forward * shotSpeed);
+    //    //animator.SetTrigger("GunFire");//銃の射撃アニメーション呼び出し
+    //    bulletDel = bullet;
+    //    //AudioSource.PlayClipAtPoint(shotSound, Camera.main.transform.position);
+    //    //virtualCamera.Follow = bullet.transform;
+    //    //StartCoroutine(SwitchBackToPlayerAfterDelay());
+    //    IsShot = true;
+    //}
 }
