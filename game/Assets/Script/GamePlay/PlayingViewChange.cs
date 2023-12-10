@@ -8,10 +8,11 @@ public class PlayingViewChange : MonoBehaviour
     [SerializeField] ShotGun shotGun;
     [SerializeField] SceneReserch sceneReserch;
     [SerializeField] GameObject Player;
+    [SerializeField] Clear Clear;
 
     public CinemachineVirtualCameraBase PlayerCamera;
     public CinemachineVirtualCameraBase UpCamera;
-
+    public CinemachineVirtualCameraBase FinishedCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class PlayingViewChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (shotGun.IsShot)
         {
             if (sceneReserch.IsBulletDelete)
