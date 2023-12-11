@@ -17,7 +17,7 @@ public class Warp : MonoBehaviour
             collision.transform.position = warpPoint.position;
 
             // ƒ[ƒvŒã‚É‰E•ûŒü‚É—Í‚ğ‰Á‚¦‚é
-            Vector3 forceDirection = Vector3.right;
+            Vector3 forceDirection = Vector3.forward;
             rb.AddForce(forceDirection * forceMagnitude, ForceMode.Impulse);
         }
     }
