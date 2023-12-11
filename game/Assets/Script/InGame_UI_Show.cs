@@ -15,12 +15,15 @@ public class InGame_UI_Show : MonoBehaviour
     [SerializeField] GameObject SuccessUI;
     [SerializeField] PopupScript popupScript; //インゲーム冒頭のマップ表示を管理しているPopupScriptを宣言
 
+
     [SerializeField] Button pauseFirstButton;
+    [SerializeField] Button timeOverFirstButton;
 
     bool Is_X_Push = false; //Xボタンが押されているか
     bool Is_Y_Push = false; //Yボタンが押されているか
     bool Is_START_Push = false; //STARTボタンが押されているか
     bool Is_Popup_Show = false; //マップが表示されたか
+    bool IsTimeOver = false;
 
     
 
@@ -40,7 +43,7 @@ public class InGame_UI_Show : MonoBehaviour
         if (Is_Popup_Show)
         {
             SetGamePaused(true);
-            if (Input.GetKeyDown("joystick button 1")) //Aボタンを検知
+            if (Input.GetKeyDown("joystick button 3")) //Aボタンを検知
             {
                 popupScript.Delete();
                 Is_Popup_Show = false; //このシーンが終わるまで、このboolがtrueになることは無い。
@@ -97,9 +100,12 @@ public class InGame_UI_Show : MonoBehaviour
                     gameSceneUI.SetActive(true);
                     Is_START_Push = false;
                 }
-                else if (TimeOverUI.activeSelf)
+                else if (TimeOverUI.activeSelf && !IsTimeOver) 
                 {
+                    EventSystem.current.SetSelectedGameObject(null);
+                    timeOverFirstButton.Select();
                     gameSceneUI.SetActive(false);
+                    IsTimeOver = true;
                 }
             }
         }       
