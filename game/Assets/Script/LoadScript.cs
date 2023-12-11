@@ -85,7 +85,7 @@ public class LoadScript : MonoBehaviour
 
         while (!async.isDone)
         {
-            loadProgressText.text = "進行中..." + (async.progress * 100) + "%";
+            loadProgressText.text = "ﾂ進ﾂ行窶吮..." + (async.progress * 100) + "%";
 
             float progressValue = async.progress;
             loadSlider.value = progressValue;

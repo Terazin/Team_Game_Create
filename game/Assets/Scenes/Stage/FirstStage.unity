@@ -2920,6 +2920,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2192981532773251873, guid: f0d2f29b765062a419634762b73b8506, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192981532773251873, guid: f0d2f29b765062a419634762b73b8506, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192981532773251873, guid: f0d2f29b765062a419634762b73b8506, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2350481526520420578, guid: 8e2e5f2b6e90f134dbb4dbfa1d4bafad, type: 3}
@@ -3426,6 +3434,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &1855357521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2350481526520420581, guid: 8e2e5f2b6e90f134dbb4dbfa1d4bafad, type: 3}
+  m_PrefabInstance: {fileID: 2350481526909308206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1896655749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3735,12 +3748,33 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2350481526520420578, guid: 8e2e5f2b6e90f134dbb4dbfa1d4bafad, type: 3}
   m_PrefabInstance: {fileID: 2350481526909308206}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1855357521}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd0cf8eb271844b4c808bdef1907c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2043811278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855357521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1961e0eca88e1af42b96fbf73e298702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  two: {fileID: 0}
+  therr: {fileID: 0}
+  four: {fileID: 0}
+  go: {fileID: 0}
+  roku: {fileID: 0}
+  nana: {fileID: 0}
+  hati: {fileID: 0}
+  Q: {fileID: 0}
+  zyuu: {fileID: 0}
 --- !u!1 &2125477660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6057379988807423252, guid: 2e11327e88595ce42845cb9d46795abc, type: 3}

@@ -110,5 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d433262837c54684c84334fe31611300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warpPoint: {fileID: 0}
+  warpPoint: {fileID: 4362695835442033508, guid: 45dc48f9f09415749975baae3a3ed8c7, type: 3}
   forceMagnitude: 10
