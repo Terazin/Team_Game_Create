@@ -98,9 +98,8 @@ GameObject:
   - component: {fileID: 9173182356069293551}
   - component: {fileID: 4834955494424153767}
   - component: {fileID: 8840660434051104749}
-  - component: {fileID: 5436164161482259428}
   - component: {fileID: 7202589843252564774}
-  - component: {fileID: 9168421924227300573}
+  - component: {fileID: 6923756416895943298}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -121,7 +120,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 980805225746173450}
-  - {fileID: 4792722038358415112}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -140,7 +138,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9173182356069293548}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -217,18 +215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   warpTarget: {fileID: 5718374261384475821, guid: b2c19a1c24a0b264686406d7d1908060, type: 3}
---- !u!114 &5436164161482259428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9173182356069293548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93326163010a7dc409bd38f0f6634bc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7202589843252564774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,8 +228,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 7352271742412966192, guid: a9249424ae5da6a449733c66bee9a625, type: 3}
---- !u!114 &9168421924227300573
-MonoBehaviour:
+--- !u!96 &6923756416895943298
+TrailRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
