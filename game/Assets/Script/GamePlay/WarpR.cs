@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Warp : MonoBehaviour
+public class WarpR : MonoBehaviour
 {
     [SerializeField] private Transform warpPoint;
     [SerializeField] private float forceMagnitude = 10.0f; // 力の大きさ
@@ -16,9 +16,9 @@ public class Warp : MonoBehaviour
             // ワープポイントの位置に弾をワープ
             collision.transform.position = warpPoint.position;
 
-            // ワープ後に特定の面から弾を発射
-            Vector3 shootDirection = warpPoint.TransformDirection(Vector3.up); // ローカル座標系の上方向をワールド座標系に変換
-            rb.AddForce(shootDirection * forceMagnitude, ForceMode.Impulse);
+            // ワープ後に右方向に力を加える
+            Vector3 forceDirection = Vector3.right;
+            rb.AddForce(forceDirection * forceMagnitude, ForceMode.Impulse);
         }
     }
 }

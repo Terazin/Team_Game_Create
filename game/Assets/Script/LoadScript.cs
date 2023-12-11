@@ -73,6 +73,10 @@ public class LoadScript : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenuNew");
     }
+    public void ClickSelectButton()
+    {
+        SceneManager.LoadScene("Stege_Select");
+    }
     /*public IEnumerator LoadScene(string sceneName)
     {
         async = SceneManager.LoadSceneAsync(sceneName);
