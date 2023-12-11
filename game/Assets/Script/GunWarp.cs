@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class GunWarp : MonoBehaviour
 {
+    private Transform warpTarget;
+    private Rigidbody rb;
     private float speed = 3.0f;
 
-    [SerializeField]
-    private Transform warpTarget; // ワープ先の位置を指定するためのオブジェクト
-
-    private Rigidbody rb;
-
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
+
         if (rb == null)
         {
             // Rigidbodyがアタッチされていない場合は、コンポーネントを追加
@@ -30,12 +28,17 @@ public class GunWarp : MonoBehaviour
         );
     }
 
+    public void SetTarget(Transform warpTarget)
+    {
+        this.warpTarget = warpTarget;
+    }
+
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.name == "WarpPoint" && warpTarget != null)
+        if (other.gameObject.name == "WarpPoint")
         {
             // ワープ先の位置にワープ
-            this.transform.position = warpTarget.position;
+            transform.position = warpTarget.position;
 
             // 吹っ飛ばしの力を追加
             if (rb != null)
