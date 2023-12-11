@@ -8,6 +8,13 @@ public class StageSelector : MonoBehaviour
     public GameObject two;
     public GameObject therr;
     public GameObject four;
+    public GameObject go;
+    public GameObject roku;
+    public GameObject nana;
+    public GameObject hati;
+    public GameObject Q;
+    public GameObject zyuu;
+   
 
     private PlayerProgress playerProgress;
 
@@ -33,6 +40,37 @@ public class StageSelector : MonoBehaviour
         {
             four.SetActive(true);
         }
+
+        if (playerProgress.stageNum >= 4)
+        {
+            go.SetActive(true);
+        }
+
+        if (playerProgress.stageNum >= 5)
+        {
+            roku.SetActive(true);
+        }
+
+        if (playerProgress.stageNum >= 6)
+        {
+            nana.SetActive(true);
+        }
+
+        if (playerProgress.stageNum >= 7)
+        {
+            hati.SetActive(true);
+        }
+
+        if (playerProgress.stageNum >= 8)
+        {
+            Q.SetActive(true);
+        }
+
+        if (playerProgress.stageNum >= 10)
+        {
+            zyuu.SetActive(true);
+        }
+
     }
 
     private void UpdateStageUI()
