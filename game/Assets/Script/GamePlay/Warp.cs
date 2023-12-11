@@ -5,26 +5,20 @@ using UnityEngine;
 public class Warp : MonoBehaviour
 {
     [SerializeField] private Transform warpPoint;
+    [SerializeField] private float forceMagnitude = 10.0f; // 力の大きさ
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
             Rigidbody rb = collision.rigidbody;
 
-            rb.velocity += warpPoint.transform.position;
+            // ワープポイントの位置に弾をワープ
+            collision.transform.position = warpPoint.position;
+
+            // ワープ後に右方向に力を加える
+            Vector3 forceDirection = Vector3.right;
+            rb.AddForce(forceDirection * forceMagnitude, ForceMode.Impulse);
         }
     }
 }
