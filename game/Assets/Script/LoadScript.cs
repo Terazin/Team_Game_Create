@@ -13,14 +13,14 @@ public class LoadScript : MonoBehaviour
 
     void Start()
     {
-        loadPanel = GameObject.Find("Canvas").transform.Find
+        /*loadPanel = GameObject.Find("Canvas").transform.Find
                ("LoadPanel").gameObject;
 
         loadSlider = loadPanel.transform.Find
                ("Slider").GetComponent<Slider>();
 
         loadProgressText = loadSlider.transform.Find
-               ("LoadText").GetComponent<Text>();
+               ("LoadText").GetComponent<Text>();*/
     }
    
     // Update is called once per frame
@@ -30,34 +30,50 @@ public class LoadScript : MonoBehaviour
     }
     public void ClickFirstStageButton()
     {
-        StartCoroutine(LoadScene("FirstStage"));
+        SceneManager.LoadScene("FirstStage");
     }
     public void ClickSecondStageButton()
     {
-        StartCoroutine(LoadScene("SecondStage"));
+        SceneManager.LoadScene("SecondStage");
     }
 
     public void ClickThirdStageButton()
     {
-        StartCoroutine(LoadScene("ThirdStage"));
+        SceneManager.LoadScene("ThirdStage");
     }
     public void ClickFourthStageButton()
     {
-        StartCoroutine(LoadScene("FourthStage"));
+        SceneManager.LoadScene("FourthStage");
     }
     public void ClickFivethStageButton()
     {
-        StartCoroutine(LoadScene("FifthStage"));
+        SceneManager.LoadScene("FifthStage");
     }
     public void ClickSixthStageButton()
     {
-        StartCoroutine(LoadScene("SixthStage"));
+        SceneManager.LoadScene("SixthStage");
+    }
+    public void ClicknanaButton()
+    {
+        SceneManager.LoadScene("SeventhStage");
+    }
+    public void ClickhatiButton()
+    {
+        SceneManager.LoadScene("EighthStage");
+    }
+    public void ClickQButton()
+    {
+        SceneManager.LoadScene("NinthStage");
+    }
+    public void ClickzyuuButton()
+    {
+        SceneManager.LoadScene("TenthStage");
     }
     public void ClickMainMenuButton()
     {
-        StartCoroutine(LoadScene("MainMenuNew"));
+        SceneManager.LoadScene("MainMenuNew");
     }
-    public IEnumerator LoadScene(string sceneName)
+    /*public IEnumerator LoadScene(string sceneName)
     {
         async = SceneManager.LoadSceneAsync(sceneName);
         loadPanel.SetActive(true);
@@ -77,5 +93,5 @@ public class LoadScript : MonoBehaviour
             loadPanel.SetActive(false);
         }
 
-    }
+    }*/
 }
