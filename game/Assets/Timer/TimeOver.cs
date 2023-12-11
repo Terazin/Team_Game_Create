@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System;
 using TMPro;
 public class TimeOver : MonoBehaviour
@@ -11,6 +12,7 @@ public class TimeOver : MonoBehaviour
     [SerializeField] private TextMeshProUGUI uiText;
     [SerializeField] private float CountTime;
     [SerializeField] TextMeshProUGUI CountDown;
+
     public  float CountDownTime;
     public GameObject timeover;
   

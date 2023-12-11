@@ -547,10 +547,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
+  m_HorizontalAxis: Axis 6
+  m_VerticalAxis: Axis 7
+  m_SubmitButton: Fire2
+  m_CancelButton: Fire1
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
@@ -2336,7 +2336,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 45d329010a13bb04cb06cde34400f1b9, type: 3}
 --- !u!114 &687639344 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5686064369202879147, guid: 45d329010a13bb04cb06cde34400f1b9, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5400156778749678502, guid: 45d329010a13bb04cb06cde34400f1b9, type: 3}
   m_PrefabInstance: {fileID: 687639343}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -2794,6 +2794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: (kari)InGameUIOperation
       objectReference: {fileID: 0}
+    - target: {fileID: 437987026177112953, guid: 660e457231ed3b642aee366af5dc348d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 437987026177112954, guid: 660e457231ed3b642aee366af5dc348d, type: 3}
       propertyPath: clear
       value: 
@@ -2903,6 +2907,10 @@ PrefabInstance:
       propertyPath: operationInstructon
       value: 
       objectReference: {fileID: 717268906}
+    - target: {fileID: 9125356380995486058, guid: ac93bf02cf9a10d42aa839248c995ad4, type: 3}
+      propertyPath: timeOverFirstButton
+      value: 
+      objectReference: {fileID: 812118503}
     - target: {fileID: 9125356380995486059, guid: ac93bf02cf9a10d42aa839248c995ad4, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -3101,6 +3109,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8576286328608038565, guid: 4f17caa3de7f93349aa100a19a69e48d, type: 3}
   m_PrefabInstance: {fileID: 812118501}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &812118503 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1444361108781243937, guid: 4f17caa3de7f93349aa100a19a69e48d, type: 3}
+  m_PrefabInstance: {fileID: 812118501}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &866267305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4557,6 +4576,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 362780792773140894, guid: 0ae20218ccaade949b0c60673bbc941b, type: 3}
   m_PrefabInstance: {fileID: 1413745585}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1413745587 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4703176256889168848, guid: 0ae20218ccaade949b0c60673bbc941b, type: 3}
+  m_PrefabInstance: {fileID: 1413745585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1437830595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -658445816637125598, guid: 2e11327e88595ce42845cb9d46795abc, type: 3}
@@ -4748,6 +4778,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4065182513467256702, guid: 2e11327e88595ce42845cb9d46795abc, type: 3}
+--- !u!114 &1648857015 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2192981532363157012, guid: f0d2f29b765062a419634762b73b8506, type: 3}
+  m_PrefabInstance: {fileID: 717268904}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1659151846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4765,7 +4806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4311059311354961952, guid: 6ccda1d3d2a663e4d9eee9b523411210, type: 3}
       propertyPath: NextStage
-      value: FifthStage
+      value: FourthStage
       objectReference: {fileID: 0}
     - target: {fileID: 4311059311354961952, guid: 6ccda1d3d2a663e4d9eee9b523411210, type: 3}
       propertyPath: gameSceneUI
@@ -4783,6 +4824,14 @@ PrefabInstance:
       propertyPath: GameOverWindow
       value: 
       objectReference: {fileID: 1413745586}
+    - target: {fileID: 4311059311354961952, guid: 6ccda1d3d2a663e4d9eee9b523411210, type: 3}
+      propertyPath: successFirstButton
+      value: 
+      objectReference: {fileID: 1648857015}
+    - target: {fileID: 4311059311354961952, guid: 6ccda1d3d2a663e4d9eee9b523411210, type: 3}
+      propertyPath: gameOverFirstButton
+      value: 
+      objectReference: {fileID: 1413745587}
     - target: {fileID: 4311059311354961953, guid: 6ccda1d3d2a663e4d9eee9b523411210, type: 3}
       propertyPath: m_RootOrder
       value: 12
