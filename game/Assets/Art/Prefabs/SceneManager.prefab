@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2350481526520420579}
   - component: {fileID: 2350481526520420578}
+  - component: {fileID: 925133327936974621}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -44,3 +45,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0cf8eb271844b4c808bdef1907c243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &925133327936974621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2350481526520420581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1961e0eca88e1af42b96fbf73e298702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  two: {fileID: 0}
+  therr: {fileID: 0}
+  four: {fileID: 0}
+  go: {fileID: 0}
+  roku: {fileID: 0}
+  nana: {fileID: 0}
+  hati: {fileID: 0}
+  Q: {fileID: 0}
+  zyuu: {fileID: 0}
