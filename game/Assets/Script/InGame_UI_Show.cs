@@ -11,6 +11,7 @@ public class InGame_UI_Show : MonoBehaviour
     [SerializeField] GameObject gameSceneUI; //X,Yボタンの処理が行われる際、通常UIを消すために宣言
     [SerializeField] GameObject Pause;
     [SerializeField] GameObject GameOverUI;
+    [SerializeField] GameObject TimeOverUI;
     [SerializeField] GameObject SuccessUI;
     [SerializeField] PopupScript popupScript; //インゲーム冒頭のマップ表示を管理しているPopupScriptを宣言
 
@@ -49,9 +50,9 @@ public class InGame_UI_Show : MonoBehaviour
         }
         else
         {
-            //XボタンとYボタンの検知
+            //XボタンとYボタンとSTARTボタンの検知
 
-            if (!Is_X_Push && !Is_Y_Push && !Is_START_Push && !GameOverUI.activeSelf && !SuccessUI.activeSelf)   //一方のボタンが押されたとき、他のボタンの動作が行われないようにする。
+            if (!Is_X_Push && !Is_Y_Push && !Is_START_Push && !GameOverUI.activeSelf && !SuccessUI.activeSelf && !TimeOverUI.activeSelf)    //一方のボタンが押されたとき、他のボタンの動作が行われないようにする。
             {
                 if (Input.GetKeyDown("joystick button 2"))
                 {
@@ -95,6 +96,10 @@ public class InGame_UI_Show : MonoBehaviour
                     Pause.SetActive(false);
                     gameSceneUI.SetActive(true);
                     Is_START_Push = false;
+                }
+                else if (TimeOverUI.activeSelf)
+                {
+                    gameSceneUI.SetActive(false);
                 }
             }
         }       
