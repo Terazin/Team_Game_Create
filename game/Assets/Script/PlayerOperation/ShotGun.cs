@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ShotGun : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
     public GameObject bulletGun;
     public GameObject bulletPrefab;
     public GameObject bulletDel;
@@ -13,6 +14,9 @@ public class ShotGun : MonoBehaviour
     public float shotSpeed;
     //public Transform playerTransform;
     public float switchBackDelay = 5.0f;
+    public AudioClip shotSound;
+
+    AudioSource audioSource_;
 
     //private bool wasTriggerPressed = false;// 前回のフレームでRTボタンが押されていたかのフラグ
     //private Transform originalFollowTarget;
@@ -21,6 +25,7 @@ public class ShotGun : MonoBehaviour
     void Start()
     {
         //originalFollowTarget = virtualCamera.Follow;
+        audioSource_ = audioSource.GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -32,6 +37,7 @@ public class ShotGun : MonoBehaviour
             // 前回のフレームでは押されておらず、現在のフレームで押されている場合に弾を発射
             if (isTriggerPressed)  
             {
+                audioSource_.PlayOneShot(shotSound);
                 //yield return new WaitForSeconds(0.3f);
 
                 GameObject bullet = Instantiate(bulletPrefab, transform.position, bulletGun.transform.rotation);
@@ -43,6 +49,7 @@ public class ShotGun : MonoBehaviour
                 //virtualCamera.Follow = bullet.transform;
                 //StartCoroutine(SwitchBackToPlayerAfterDelay());
                 IsShot = true;
+                
             }
         }
     }
