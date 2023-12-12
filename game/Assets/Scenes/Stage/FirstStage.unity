@@ -1314,7 +1314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3834577228790020493, guid: 692ccdb715c214b448472a25384c56e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.24
+      value: -5.97
       objectReference: {fileID: 0}
     - target: {fileID: 3834577228790020493, guid: 692ccdb715c214b448472a25384c56e1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2075,15 +2075,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218226121}
-  m_LocalRotation: {x: 0.5043405, y: 0.49561405, z: -0.5026147, w: 0.49737892}
-  m_LocalPosition: {x: -9.23, y: 8.04, z: 0.19}
+  m_LocalRotation: {x: 0.5024792, y: 0.49750507, z: -0.5007428, w: 0.49925947}
+  m_LocalPosition: {x: -9.23, y: 9.03, z: 0.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 500236163}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 90.8, y: 90.06, z: 0.26}
+  m_LocalEulerAnglesHint: {x: 90.37, y: 90.06, z: 0.26}
 --- !u!1 &1275918689 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6635597602326744057, guid: f0d2f29b765062a419634762b73b8506, type: 3}
@@ -2938,7 +2938,7 @@ PrefabInstance:
     - target: {fileID: 3873671465963946351, guid: f0d2f29b765062a419634762b73b8506, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8c1e3561a78ab2644898302a8750276b, type: 3}
+      objectReference: {fileID: 21300000, guid: 20c534c18813e914481590ec451ee510, type: 3}
     - target: {fileID: 3873671465963946351, guid: f0d2f29b765062a419634762b73b8506, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -2950,6 +2950,22 @@ PrefabInstance:
     - target: {fileID: 3873671465963946351, guid: f0d2f29b765062a419634762b73b8506, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053115624459052392, guid: f0d2f29b765062a419634762b73b8506, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2350481526520420578, guid: 8e2e5f2b6e90f134dbb4dbfa1d4bafad, type: 3}
+    - target: {fileID: 4053115624459052392, guid: f0d2f29b765062a419634762b73b8506, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickFirstStageButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053115624459052392, guid: f0d2f29b765062a419634762b73b8506, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoadScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053115624459052392, guid: f0d2f29b765062a419634762b73b8506, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8691280402703136013, guid: f0d2f29b765062a419634762b73b8506, type: 3}
       propertyPath: m_Alpha
