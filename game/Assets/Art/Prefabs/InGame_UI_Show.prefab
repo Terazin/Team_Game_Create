@@ -47,4 +47,14 @@ MonoBehaviour:
   operationInstructon: {fileID: 0}
   MapView: {fileID: 0}
   gameSceneUI: {fileID: 0}
+  Pause: {fileID: 0}
+  GameOverUI: {fileID: 0}
+  TimeOverUI: {fileID: 0}
+  SuccessUI: {fileID: 0}
   popupScript: {fileID: 0}
+  pauseFirstButton: {fileID: 0}
+  timeOverFirstButton: {fileID: 0}
+  gameOverFirstButton: {fileID: 0}
+  audioSource: {fileID: 0}
+  selectSound: {fileID: 8300000, guid: ee665788477e6254d93d71c4f2d1ff71, type: 3}
+  decideSound: {fileID: 8300000, guid: 3594b6df7ba025249abbf27e1e692f6f, type: 3}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Imageコンポーネントを使用するために追加
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class Observer : MonoBehaviour
 {
