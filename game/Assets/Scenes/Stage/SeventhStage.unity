@@ -685,6 +685,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 508835714}
     - target: {fileID: 9125356380995486058, guid: ac93bf02cf9a10d42aa839248c995ad4, type: 3}
+      propertyPath: gameOverFirstButton
+      value: 
+      objectReference: {fileID: 1995455225}
+    - target: {fileID: 9125356380995486058, guid: ac93bf02cf9a10d42aa839248c995ad4, type: 3}
       propertyPath: operationInstructon
       value: 
       objectReference: {fileID: 508835712}
