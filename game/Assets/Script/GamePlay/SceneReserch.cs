@@ -36,16 +36,16 @@ public class SceneReserch : MonoBehaviour
                 bulletRefLimit = 3;
                 break;
             case "SeventhStage":
-                bulletRefLimit = 7;
+                bulletRefLimit = 10;
                 break;
             case "EighthStage":
-                bulletRefLimit = 4;
-                break;
-            case "NinthStage":
                 bulletRefLimit = 5;
                 break;
+            case "NinthStage":
+                bulletRefLimit = 11;
+                break;
             case "TenthStage":
-                bulletRefLimit = 9;
+                bulletRefLimit = 7;
                 break;
         }
     }
