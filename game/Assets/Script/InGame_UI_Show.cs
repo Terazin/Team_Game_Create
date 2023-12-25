@@ -10,6 +10,7 @@ public class InGame_UI_Show : MonoBehaviour
     [SerializeField] GameObject MapView;
     [SerializeField] GameObject gameSceneUI; //X,Yボタンの処理が行われる際、通常UIを消すために宣言
     [SerializeField] GameObject Pause;
+    [SerializeField] GameObject Option;
     [SerializeField] GameObject GameOverUI;
     [SerializeField] GameObject TimeOverUI;
     [SerializeField] GameObject SuccessUI;
@@ -17,6 +18,7 @@ public class InGame_UI_Show : MonoBehaviour
 
 
     [SerializeField] Button pauseFirstButton; //ポーズの初期選択ボタン
+    [SerializeField] Button optionFirstButton; //オプションの初期選択ボタン
     [SerializeField] Button timeOverFirstButton; //タイムオーバーの初期選択ボタン
     [SerializeField] Button gameOverFirstButton; //ゲームオーバーの初期選択ボタン
 
@@ -31,6 +33,7 @@ public class InGame_UI_Show : MonoBehaviour
     bool Is_X_Push = false; //Xボタンが押されているか
     bool Is_Y_Push = false; //Yボタンが押されているか
     bool Is_START_Push = false; //STARTボタンが押されているか
+    bool Is_Option_Push = false; //pauseのoptionボタンが押されたか
     bool Is_Popup_Show = false; //マップが表示されたか
     bool IsTimeOver = false; //TimeOverが表示されているか
     bool IsGameOver = false; //GameOverが表示されているか
@@ -103,7 +106,7 @@ public class InGame_UI_Show : MonoBehaviour
                     gameSceneUI.SetActive(true);
                     Is_Y_Push = false;
                 }
-                else if ((Input.GetKeyDown("joystick button 7")) && Is_START_Push) //もう一度STARTボタンが押されたときの処理
+                else if ((Input.GetKeyDown("joystick button 7")) && Is_START_Push && !Is_Option_Push)  //もう一度STARTボタンが押されたときの処理
                 {
                     Pause.SetActive(false);
                     gameSceneUI.SetActive(true);
@@ -125,22 +128,32 @@ public class InGame_UI_Show : MonoBehaviour
                 }
             }
         }
-
-        //if (SuccessUI.activeSelf || GameOverUI.activeSelf || TimeOverUI.activeSelf || Pause.activeSelf) 
-        //{
-        //    float select = Input.GetAxis("Axis 6");
-        //    if (select != 0)
-        //    {
-        //        audioSource_.PlayOneShot(selectSound);
-        //    }
-        //    else if (Input.GetKeyDown("joystick button 1")){
-        //        audioSource_.PlayOneShot(decideSound);
-        //    }
-        //}
     }
 
     void SetGamePaused(bool isPaused)
     {
         Time.timeScale = isPaused ? 0.0f : 1.0f;
+    }
+
+    public void optionPush() //pauseのoptionボタンのOnClick()に登録
+    {
+        Pause.SetActive(false);
+        Option.SetActive(true);
+        //初期選択ボタンの初期化
+        EventSystem.current.SetSelectedGameObject(null);
+        //初期選択ボタンの再指定
+        optionFirstButton.Select();
+        Is_Option_Push = true;
+    }
+
+    public void backPush() //optionのbackボタンのOnClick()に登録
+    {
+        Option.SetActive(false);
+        Pause.SetActive(true);
+        //初期選択ボタンの初期化
+        EventSystem.current.SetSelectedGameObject(null);
+        //初期選択ボタンの再指定
+        pauseFirstButton.Select();
+        Is_Option_Push = false;
     }
 }
