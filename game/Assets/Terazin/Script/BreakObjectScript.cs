@@ -24,7 +24,10 @@ public class BreakObjectScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-            enemyDestroy.IsBoxDel = true;
+            if (enemyDestroy != null)
+            {
+                enemyDestroy.IsBoxDel = true;
+            }          
             Destroy(gameObject);            
             Instantiate(Particle, this.transform.position, Quaternion.identity);
         }
