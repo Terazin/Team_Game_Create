@@ -20,10 +20,10 @@ public class PopupScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Joystick1Button1))
-        {
-            Appear();
-        }
+        //if (Input.GetKeyDown(KeyCode.Joystick1Button1))
+        //{
+        //    Appear();
+        //}
     }
 
     //Appear関数が呼び出されるとポップアップが表示される
