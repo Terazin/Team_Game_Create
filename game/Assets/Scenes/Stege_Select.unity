@@ -180,6 +180,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6feee4b5a1bd45142870d2506172a0a3, type: 3}
+--- !u!1 &16760891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 16760892}
+  - component: {fileID: 16760894}
+  - component: {fileID: 16760893}
+  m_Layer: 5
+  m_Name: back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &16760892
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16760891}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.4851484, y: 1.372293, z: 1.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 26873078}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 556, y: 98}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &16760893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16760891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: fbad89eaa95620244bf37149192bf611, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &16760894
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16760891}
+  m_CullTransparentMesh: 1
 --- !u!1 &17645440
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,12 +457,13 @@ RectTransform:
   - {fileID: 1143241198}
   - {fileID: 107575455}
   - {fileID: 1841883133}
+  - {fileID: 16760892}
   m_Father: {fileID: 1574291577}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000027656555, y: 0}
+  m_AnchoredPosition: {x: -2, y: 0}
   m_SizeDelta: {x: 584.309, y: 461.299}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &44384757
@@ -3157,7 +3234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8820622044715416666, guid: 2ba7012a4ea5daa46b12e1267aee08a9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.1694946
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8820622044715416666, guid: 2ba7012a4ea5daa46b12e1267aee08a9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7742,7 +7819,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 417898347}
   m_HandleRect: {fileID: 417898346}
   m_Direction: 0
-  m_Value: 0.00000010445697
+  m_Value: 0.0034228454
   m_Size: 0.5779056
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8509,9 +8586,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1841883134}
-        m_TargetAssemblyTypeName: PopupScript, Assembly-CSharp
-        m_MethodName: Appear
+      - m_Target: {fileID: 2350481526520420578, guid: 8e2e5f2b6e90f134dbb4dbfa1d4bafad, type: 3}
+        m_TargetAssemblyTypeName: LoadScript, Assembly-CSharp
+        m_MethodName: ClickMainMenuButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
