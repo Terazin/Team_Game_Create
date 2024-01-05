@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class BGMManager : MonoBehaviour
 {
+    // 特定のシーンの名前
+    public string[] targetSceneNames = { "Title", "MainMenuNew", "Stage_Select" };
     private static BGMManager instance;
 
     private void Awake()
@@ -17,12 +19,28 @@ public class BGMManager : MonoBehaviour
         // シーンが切り替わってもオブジェクトが破棄されないようにする
         DontDestroyOnLoad(gameObject);
         instance = this;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private void Start()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // ここにBGM再生の初期化などを追加
+        // 特定のシーン以外に移動したら、このオブジェクトを破棄
+        if (!IsTargetScene(scene.name))
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // 他のスクリプトから呼び出されるメソッドなどを追加
+    // シーンが対象のシーンかどうかを判定するメソッド
+    private bool IsTargetScene(string sceneName)
+    {
+        foreach (string targetScene in targetSceneNames)
+        {
+            if (sceneName == targetScene)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
