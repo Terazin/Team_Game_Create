@@ -50,8 +50,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage/NinthStage.unity
     guid: 2cf921ab26c56474fb067d4dccb6c440
-  - enabled: 1
-    path: Assets/Scenes/Stage/TenthStage.unity
-    guid: ff705d642387eac4782f964635f7ada2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 413d275df1d684d44b6bc93f41e15357, type: 2}
